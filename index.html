@@ -94,12 +94,13 @@ section { padding: 88px 0; }
 .arrow-next::after {
   content: '';
   position: absolute;
-  bottom: -26px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
-  border: 36px solid transparent;
-  border-top: 26px solid var(--bg-soft);
-  border-bottom: 0;
+  width: 40px;
+  height: 20px;
+  background-color: var(--bg-soft);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
   z-index: 3;
 }
 .sec-green { background: linear-gradient(180deg, var(--green) 0%, var(--green-dark) 100%); color: var(--white); }
@@ -891,6 +892,16 @@ footer { background: var(--green-darker); padding: 28px 0; }
   .entry-cta .cta-btn { font-size: 17px; padding: 17px 16px; gap: 2px 8px; }
   .entry-cta .cta-btn small { font-size: 12px; }
   .countdown .unit { min-width: 0; flex: 1; }
+  section {
+    overflow: hidden;
+  }
+
+  /* スマホ用に三角形サイズをさらにコンパクト化＆中央配置 */
+  .arrow-next::after {
+    bottom: -14px;
+    width: 28px;   /* さらに小さく調整 */
+    height: 14px;  /* 高さも小さく */
+  }
 }
 </style>
 </head>
