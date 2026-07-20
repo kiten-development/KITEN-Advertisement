@@ -89,7 +89,7 @@ a { text-decoration: none; }
 section { padding: 88px 0; }
 .sec-soft { background: var(--bg-soft); }
 
-.arrow-next { position: relative; }
+.arrow-next { position: relative;  }
 
 .arrow-next::after {
   content: '';
@@ -803,27 +803,66 @@ footer { background: var(--green-darker); padding: 28px 0; }
   .nc-photo { max-width: 320px; margin: 0 auto; }
   .nc-stats { grid-template-columns: 1fr; gap: 22px; padding-top: 26px; }
   .nc-stat + .nc-stat { border-left: none; border-top: 1px solid var(--line); padding-top: 22px; }
+  .cmpx {
+    min-width: 0 !important;
+    width: 100%;
+    grid-template-columns: 0.8fr 1.1fr 1.1fr;
+  }
   .cmpx-title { gap: 10px; }
   .cmpx-title h2 { font-size: 19px; }
   .cmpx-divider { margin: 12px auto 30px; }
-  .cmpx-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -20px; padding: 24px 14px 54px; }
+  .cmpx-scroll { overflow-x: hidden; -webkit-overflow-scrolling: touch; margin: 0 0px; padding: 20px 0 34px; }
   .cmpx { min-width: 640px; grid-template-columns: .66fr 1.4fr 1.0fr; }
-  .scroll-hint { display: flex; }
-  .cmpx-head { height: 56px; font-size: 16px; }
+  .scroll-hint { display: none !important; }
+  .cmpx-head {
+    font-size: 11px;
+    height: 48px;
+    padding: 0 4px;
+    text-align: center;
+  }
   .cmpx-col .cell { min-height: 76px; padding: 0 16px; gap: 12px; }
-  .cmpx-col.labels .cell { padding: 0 8px; gap: 6px; font-size: 12.5px; line-height: 1.3; letter-spacing: -.02em; white-space: nowrap; }
+  .cmpx-col.labels .cell {
+    font-size: 11px;             /* 左端ラベル文字サイズ */
+    padding: 0 4px;
+    gap: 4px;
+  }
   .cmpx-col.labels .ic { width: 34px; height: 34px; }
   .cmpx-col.labels .ic svg { width: 17px; height: 17px; }
   .cmpx-col.kiten { margin: -20px 0; padding-bottom: 20px; }
   .cmpx-col.kiten .cmpx-head { height: 76px; }
-  .cmpx-col.kiten .cell { padding: 0 18px; }
-  .cmpx-col.kiten .cell p { font-size: 16.5px; }
-  .cmpx-col.kiten .cell em.big { font-size: 22px; }
-  .cmpx-col.normal .cell { font-size: 13.5px; }
-  .cmpx .ic, .cmpx .yen { width: 44px; height: 44px; }
-  .cmpx .ic svg { width: 21px; height: 21px; }
+  .cmpx-col.kiten .cell {
+    padding: 0 6px;
+  }
+  .cmpx-col.kiten .cell p {
+    font-size: 12px;
+    white-space: normal;
+  }
+  .cmpx-col.kiten .cell em.big {
+    font-size: 16px;
+  }
+  .cmpx-col.normal .cell {
+    font-size: 11px;
+    padding: 0 6px;
+    line-height: 1.3;
+  }
+  .cmpx .ic, 
+  .cmpx .yen {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+  .cmpx .ic svg {
+    width: 14px;
+    height: 14px;
+  }
   .cmpx .yen { font-size: 14px; }
-  .cmpx-pill { font-size: 13px; padding: 8px 18px; bottom: -20px; gap: 7px; }
+  .cmpx-pill {
+    font-size: 11px;
+    padding: 6px 14px;
+    bottom: -16px;
+    width: 90%;
+    justify-content: center;
+  }
   .cmpx-pill svg { width: 19px; height: 17px; }
   .system-grid { grid-template-columns: 1fr; }
   .capa { padding: 28px 18px 22px; border-radius: 16px; }
@@ -896,7 +935,6 @@ footer { background: var(--green-darker); padding: 28px 0; }
     overflow: hidden;
   }
 
-  /* スマホ用に三角形サイズをさらにコンパクト化＆中央配置 */
   .arrow-next::after {
     bottom: -14px;
     width: 28px;   /* さらに小さく調整 */
