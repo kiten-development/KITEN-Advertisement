@@ -203,10 +203,10 @@ img { max-width: 100%; display: block; }
       <textarea id="ef-message" name="message" placeholder="現在の広告課題や目標などがあればご記入ください"></textarea>
     </div>
     <div class="ef-submit">
-      <button type="submit" class="cta-btn" id="ef-submit-btn"><span class="lb">無料で<span class="kw">エントリー</span>する</span><small>（簡単3分）</small></button>
+      <button type="submit" class="cta-btn" id="ef-submit-btn"><span class="lb">無料で<span class="kw">エントリー</span>する</span></button>
     </div>
     <p class="ef-error" id="ef-error">送信に失敗しました。時間をおいて再度お試しください。</p>
-    <p class="entry-note">※ご入力いただいた情報は、プライバシーポリシーに基づき厳重に管理いたします。</p>
+    <p class="entry-note">※ご入力いただいた情報は、<a href="https://kit-en.co.jp/privacy-policy/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に基づき厳重に管理いたします。</p>
   </form>
 
   <div class="ef-success" id="ef-success">
@@ -249,7 +249,6 @@ img { max-width: 100%; display: block; }
       mode: 'no-cors',
       body: data
     }).then(function () {
-      // no-corsのためレスポンス内容は読めないが、到達できれば成功とみなす
       form.style.display = 'none';
       if (head) head.style.display = 'none';
       success.style.display = 'block';
