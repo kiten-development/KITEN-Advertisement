@@ -10,21 +10,21 @@
 <link rel="icon" href="assets/company_logo.png" type=“image/x-icon”>
 <style>
 :root {
-  --green: #0B5E38;
-  --green-dark: #084A2C;
-  --green-darker: #063B23;
-  --green-pale: #EAF3EE;
-  --bg-soft: #F4F7F5;
-  --orange: #F5820B;
-  --orange-dark: #E06F00;
-  --gold: #C9A34A;
-  --gold-light: #E8CF8E;
-  --text: #1E2A24;
-  --muted: #5F6E66;
-  --line: #E2E8E4;
-  --white: #fff;
-  --radius: 14px;
-  --shadow: 0 4px 24px rgba(14, 60, 38, .08);
+  --green: #0B5E38;
+  --green-dark: #084A2C;
+  --green-darker: #063B23;
+  --green-pale: #EAF3EE;
+  --bg-soft: #F4F7F5;
+  --orange: #F5820B;
+  --orange-dark: #E06F00;
+  --gold: #C9A34A;
+  --gold-light: #E8CF8E;
+  --text: #1E2A24;
+  --muted: #5F6E66;
+  --line: #E2E8E4;
+  --white: #fff;
+  --radius: 14px;
+  --shadow: 0 4px 24px rgba(14, 60, 38, .08);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,11 +33,11 @@ br.pc { display: inline; }
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background: var(--white);
-  color: var(--text);
-  line-height: 1.8;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: var(--white);
+  color: var(--text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
 }
 
 img { max-width: 100%; display: block; }
@@ -55,20 +55,20 @@ a { text-decoration: none; }
 .fv + section { padding-top: 68px; }
 
 .cta-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: linear-gradient(180deg, var(--orange) 0%, var(--orange-dark) 100%);
-  color: var(--white);
-  font-size: 20px;
-  font-weight: 900;
-  padding: 20px 56px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 8px 24px rgba(224, 111, 0, .35);
-  transition: transform .15s, box-shadow .15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(180deg, var(--orange) 0%, var(--orange-dark) 100%);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 900;
+  padding: 20px 56px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(224, 111, 0, .35);
+  transition: transform .15s, box-shadow .15s;
 }
 
 .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(224, 111, 0, .45); }
@@ -89,25 +89,24 @@ a { text-decoration: none; }
 section { padding: 88px 0; }
 .sec-soft { background: var(--bg-soft); }
 
-.arrow-next { position: relative;  }
+.arrow-next { position: relative; }
 
 .arrow-next::after {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 20px;
-  background-color: var(--bg-soft);
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  z-index: 3;
+  content: '';
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 36px solid transparent;
+  border-top: 26px solid var(--bg-soft);
+  border-bottom: 0;
+  z-index: 3;
 }
 .sec-green { background: linear-gradient(180deg, var(--green) 0%, var(--green-dark) 100%); color: var(--white); }
 
 .sec-gold {
-  background: linear-gradient(170deg, #EFE4BE 0%, #DCC287 55%, #E8D7A6 100%);
-  color: var(--green-darker);
+  background: linear-gradient(170deg, #EFE4BE 0%, #DCC287 55%, #E8D7A6 100%);
+  color: var(--green-darker);
 }
 
 .sec-gold .section-title { color: var(--green-darker); }
@@ -120,13 +119,13 @@ section { padding: 88px 0; }
 .section-header { text-align: center; margin-bottom: 48px; }
 
 .section-label {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .22em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .sec-green .section-label { color: var(--gold-light); }
@@ -145,10 +144,10 @@ section { padding: 88px 0; }
 .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
 .problem-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 30px 28px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px 28px;
 }
 
 .problem-head { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
@@ -160,24 +159,24 @@ section { padding: 88px 0; }
 .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 56px; }
 
 .offer-card {
-  background: var(--white);
-  color: var(--text);
-  border-radius: var(--radius);
-  padding: 36px 28px;
-  text-align: center;
-  box-shadow: 0 6px 28px rgba(4, 40, 24, .25);
+  background: var(--white);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 6px 28px rgba(4, 40, 24, .25);
 }
 
 .offer-card .num-label {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .18em;
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  border-radius: 999px;
-  padding: 2px 14px;
-  margin-bottom: 14px;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  padding: 2px 14px;
+  margin-bottom: 14px;
 }
 
 .offer-card .icon-img { height: 60px; width: auto; margin: 4px auto 14px; display: block; object-fit: contain; }
@@ -191,23 +190,23 @@ section { padding: 88px 0; }
 .cmpx-scroll { overflow: visible; }
 
 .scroll-hint {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  align-items: center;
-  gap: 10px;
-  background: rgba(6, 59, 35, .88);
-  color: var(--white);
-  font-size: 12.5px;
-  font-weight: 700;
-  padding: 12px 20px;
-  border-radius: 999px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
-  pointer-events: none;
-  z-index: 5;
-  transition: opacity .4s;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  gap: 10px;
+  background: rgba(6, 59, 35, .88);
+  color: var(--white);
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity .4s;
 }
 
 .scroll-hint.is-hidden { opacity: 0; }
@@ -218,12 +217,12 @@ section { padding: 88px 0; }
 .cmpx-title h2 { font-size: 34px; font-weight: 900; color: var(--white); line-height: 1.4; }
 .cmpx-title h2 .kiten { color: var(--gold-light); }
 .cmpx-title h2 em {
-  font-style: normal;
-  color: var(--orange);
-  -webkit-text-emphasis: filled circle var(--orange);
-  text-emphasis: filled circle var(--orange);
-  -webkit-text-emphasis-position: over right;
-  text-emphasis-position: over right;
+  font-style: normal;
+  color: var(--orange);
+  -webkit-text-emphasis: filled circle var(--orange);
+  text-emphasis: filled circle var(--orange);
+  -webkit-text-emphasis-position: over right;
+  text-emphasis-position: over right;
 }
 
 .cmpx-divider { display: flex; align-items: center; gap: 12px; margin: 16px auto 46px; max-width: 880px; }
@@ -234,22 +233,22 @@ section { padding: 88px 0; }
 .cmpx { display: grid; grid-template-columns: .72fr 1.3fr 1.05fr; align-items: stretch; background: #F2F1EC; border-radius: 16px; }
 
 .cmpx-head {
-  height: 66px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 19px;
-  font-weight: 900;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: 900;
 }
 
 .cmpx-col .cell {
-  min-height: 98px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 0 26px;
-  border-top: 1px solid #E5E2D8;
-  font-weight: 700;
+  min-height: 98px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 26px;
+  border-top: 1px solid #E5E2D8;
+  font-weight: 700;
 }
 
 .cmpx-col.labels { background: #F2F1EC; border-radius: 16px 0 0 16px; }
@@ -258,14 +257,14 @@ section { padding: 88px 0; }
 .cmpx-col.labels .ic svg { color: var(--green-dark); }
 
 .cmpx-col.kiten {
-  background: var(--white);
-  border: 2.5px solid var(--gold);
-  border-radius: 16px;
-  box-shadow: 0 14px 34px rgba(3, 30, 18, .35);
-  position: relative;
-  z-index: 1;
-  margin: -28px 0;
-  padding-bottom: 28px;
+  background: var(--white);
+  border: 2.5px solid var(--gold);
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(3, 30, 18, .35);
+  position: relative;
+  z-index: 1;
+  margin: -28px 0;
+  padding-bottom: 28px;
 }
 
 .cmpx-col.kiten .cmpx-head { background: var(--green-dark); color: var(--white); border-radius: 12px 12px 0 0; height: 94px; }
@@ -283,51 +282,51 @@ section { padding: 88px 0; }
 .cmpx-col.normal .ic svg { color: #454542; }
 
 .cmpx .ic {
-  flex-shrink: 0;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 1px 5px rgba(60, 50, 20, .08);
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 5px rgba(60, 50, 20, .08);
 }
 
 .cmpx .ic svg { width: 26px; height: 26px; }
 
 .cmpx .yen {
-  flex-shrink: 0;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: var(--green-dark);
-  color: var(--white);
-  font-weight: 900;
-  font-size: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: var(--white);
+  font-weight: 900;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cmpx-pill {
-  position: absolute;
-  bottom: -24px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--white);
-  border: 2px solid var(--orange);
-  color: var(--orange);
-  font-weight: 900;
-  font-size: 16px;
-  border-radius: 999px;
-  padding: 10px 28px;
-  white-space: nowrap;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
-  z-index: 2;
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  font-weight: 900;
+  font-size: 16px;
+  border-radius: 999px;
+  padding: 10px 28px;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+  z-index: 2;
 }
 
 .cmpx-pill svg { width: 24px; height: 21px; flex-shrink: 0; }
@@ -336,26 +335,26 @@ section { padding: 88px 0; }
 .flow { display: flex; align-items: center; justify-content: center; gap: 4px; flex-wrap: wrap; }
 
 .flow .step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--green-dark);
-  min-width: 64px;
-  text-align: center;
-  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green-dark);
+  min-width: 64px;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .flow .step .icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--green-pale);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--green-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flow .step .icon svg { width: 22px; height: 22px; color: var(--green); }
@@ -363,22 +362,22 @@ section { padding: 88px 0; }
 
 /* ===== Why KITEN ===== */
 .network-card {
-  background: var(--white);
-  border: 1.5px solid #E4E4DE;
-  border-radius: 22px;
-  padding: 46px 52px 40px;
-  box-shadow: 0 8px 28px rgba(30, 42, 36, .06);
-  text-align: center;
-  margin-bottom: 64px;
+  background: var(--white);
+  border: 1.5px solid #E4E4DE;
+  border-radius: 22px;
+  padding: 46px 52px 40px;
+  box-shadow: 0 8px 28px rgba(30, 42, 36, .06);
+  text-align: center;
+  margin-bottom: 64px;
 }
 
 .nc-main {
-  display: grid;
-  grid-template-columns: 1.18fr .82fr;
-  gap: 20px 48px;
-  align-items: center;
-  text-align: left;
-  margin-bottom: 42px;
+  display: grid;
+  grid-template-columns: 1.18fr .82fr;
+  gap: 20px 48px;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 42px;
 }
 
 .nc-title { font-size: 24px; font-weight: 900; line-height: 1.55; color: var(--green-dark); margin-bottom: 24px; }
@@ -387,13 +386,13 @@ section { padding: 88px 0; }
 .agency-logos { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 26px; }
 
 .agency-logos span {
-  background: #F0F2F0;
-  border-radius: 8px;
-  padding: 9px 20px;
-  font-size: 14.5px;
-  font-weight: 700;
-  color: #4A5650;
-  letter-spacing: .04em;
+  background: #F0F2F0;
+  border-radius: 8px;
+  padding: 9px 20px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #4A5650;
+  letter-spacing: .04em;
 }
 
 .nc-note { font-size: 16px; color: var(--text); margin: 0; }
@@ -405,14 +404,14 @@ section { padding: 88px 0; }
 .nc-stat + .nc-stat { border-left: 1px solid var(--line); }
 
 .nc-ic {
-  display: flex;
-  width: 66px;
-  height: 66px;
-  border-radius: 50%;
-  background: var(--green-pale);
-  margin: 0 auto 12px;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: var(--green-pale);
+  margin: 0 auto 12px;
+  align-items: center;
+  justify-content: center;
 }
 
 .nc-ic img { width: 34px; height: 30px; object-fit: contain; }
@@ -423,11 +422,11 @@ section { padding: 88px 0; }
 .nc-stat .sub { font-size: 12.5px; color: var(--muted); }
 
 .sub-heading {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 900;
-  margin-bottom: 32px;
-  color: var(--green-dark);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 32px;
+  color: var(--green-dark);
 }
 
 .sec-green .sub-heading { color: var(--white); }
@@ -436,18 +435,18 @@ section { padding: 88px 0; }
 .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 8px; }
 
 .case-card {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
 .case-photo {
-  width: 100%;
-  height: 215px;
-  background-size: 200% auto;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 215px;
+  background-size: 200% auto;
+  background-repeat: no-repeat;
 }
 .case-photo.p1 { background-image: url('assets/talent-2.jpg'); background-position: 100% 5%; }
 .case-photo.p2 { background-image: url('assets/talent-2.jpg'); background-position: 0% 12%; }
@@ -456,14 +455,14 @@ section { padding: 88px 0; }
 .case-body { padding: 22px 22px 26px; }
 
 .case-tag {
-  display: inline-block;
-  background: var(--green);
-  color: var(--white);
-  font-size: 11.5px;
-  font-weight: 700;
-  border-radius: 999px;
-  padding: 3px 14px;
-  margin-bottom: 8px;
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  font-size: 11.5px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 3px 14px;
+  margin-bottom: 8px;
 }
 
 .case-talent { font-size: 14px; font-weight: 700; color: var(--muted); margin-bottom: 14px; }
@@ -481,9 +480,9 @@ section { padding: 88px 0; }
 .system-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
 
 .system-card {
-  background: var(--bg-soft);
-  border-radius: var(--radius);
-  padding: 36px 32px;
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  padding: 36px 32px;
 }
 
 .system-card h4 { font-size: 19px; font-weight: 900; color: var(--green-dark); margin-bottom: 12px; }
@@ -492,10 +491,10 @@ section { padding: 88px 0; }
 .system-card .flow { margin: 22px 0 6px; justify-content: flex-start; }
 
 .capa {
-  background: #F3F3EE;
-  border-radius: 22px;
-  padding: 48px 52px 40px;
-  text-align: center;
+  background: #F3F3EE;
+  border-radius: 22px;
+  padding: 48px 52px 40px;
+  text-align: center;
 }
 
 .capa h4 { font-size: 27px; font-weight: 900; color: var(--green-dark); margin-bottom: 14px; }
@@ -507,30 +506,30 @@ section { padding: 88px 0; }
 .cstep { position: relative; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 
 .cstep .circle {
-  width: 126px;
-  height: 126px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 1.5px solid var(--green-dark);
-  box-shadow: 0 2px 10px rgba(30, 42, 36, .06);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1.5px solid var(--green-dark);
+  box-shadow: 0 2px 10px rgba(30, 42, 36, .06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cstep .circle svg { width: 52px; height: 52px; color: var(--green-dark); }
 
 .cstep .no {
-  position: absolute;
-  top: -11px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--green-dark);
-  color: var(--white);
-  font-size: 11.5px;
-  font-weight: 700;
-  padding: 2px 13px;
-  border-radius: 999px;
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--green-dark);
+  color: var(--white);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 2px 13px;
+  border-radius: 999px;
 }
 
 .cstep .lb { font-size: 16px; font-weight: 900; color: var(--text); }
@@ -545,15 +544,15 @@ section { padding: 88px 0; }
 .fact .fd { font-size: 13px; font-weight: 500; color: var(--muted); margin-top: 8px; line-height: 1.8; }
 
 .reg-note {
-  max-width: 860px;
-  margin: 6px auto 0;
-  background: var(--white);
-  border: 1.5px solid #E4E4DE;
-  border-radius: 14px;
-  padding: 20px 26px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
+  max-width: 860px;
+  margin: 6px auto 0;
+  background: var(--white);
+  border: 1.5px solid #E4E4DE;
+  border-radius: 14px;
+  padding: 20px 26px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .reg-photo { width: 136px; height: 96px; object-fit: cover; border-radius: 10px; flex-shrink: 0; }
@@ -564,36 +563,36 @@ section { padding: 88px 0; }
 
 /* ===== 応募条件・ステップ ===== */
 .joken-card, .flow-card {
-  background: var(--white);
-  border-radius: 18px;
-  padding: 42px 44px;
-  box-shadow: 0 12px 34px rgba(90, 66, 20, .2);
+  background: var(--white);
+  border-radius: 18px;
+  padding: 42px 44px;
+  box-shadow: 0 12px 34px rgba(90, 66, 20, .2);
 }
 
 .joken-card, .flow-card { display: flex; flex-direction: column; }
 .flow-card .flow3 { flex: 1; }
 
 .joken-card h3 {
-  font-size: 26px;
-  font-weight: 900;
-  letter-spacing: .02em;
-  color: var(--green-darker);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 14px;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: .02em;
+  color: var(--green-darker);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 
 .jk-icon {
-  flex-shrink: 0;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: var(--green-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .jk-icon svg { width: 22px; height: 22px; color: var(--white); }
@@ -605,40 +604,40 @@ section { padding: 88px 0; }
 .jk-list { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
 
 .jk-item {
-  background: #F3F2EC;
-  border-radius: 16px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  background: #F3F2EC;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .jk-photo { width: 100%; height: 132px; object-fit: cover; display: block; }
 .jk-body { padding: 20px 26px 24px; }
 
 .jk-no {
-  display: inline-block;
-  background: var(--green-dark);
-  color: var(--white);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  padding: 2px 12px;
-  border-radius: 999px;
-  margin-bottom: 6px;
+  display: inline-block;
+  background: var(--green-dark);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 2px 12px;
+  border-radius: 999px;
+  margin-bottom: 6px;
 }
 
 .jk-item p { font-size: 16px; font-weight: 700; line-height: 1.8; }
 
 .fl-title {
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: .02em;
-  color: var(--green-darker);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 34px;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: .02em;
+  color: var(--green-darker);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 34px;
 }
 
 .fl-title span { display: block; width: 70px; height: 1.5px; background: var(--green-darker); opacity: .55; }
@@ -649,41 +648,41 @@ section { padding: 88px 0; }
 .flow3 .col:last-child { padding-right: 8px; }
 
 .flow3 .col + .col::before {
-  content: '▶';
-  position: absolute;
-  left: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--gold);
-  font-size: 16px;
-  line-height: 1;
+  content: '▶';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 16px;
+  line-height: 1;
 }
 
 .col-head { display: flex; gap: 16px; align-items: center; margin-bottom: 10px; }
 
 .fl-icon {
-  flex-shrink: 0;
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: var(--green-pale);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--green-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fl-icon svg { width: 34px; height: 34px; color: var(--green-dark); }
 
 .fl-step {
-  display: inline-block;
-  background: var(--green-dark);
-  color: var(--white);
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  padding: 3px 13px;
-  border-radius: 6px;
-  margin-bottom: 7px;
+  display: inline-block;
+  background: var(--green-dark);
+  color: var(--white);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 3px 13px;
+  border-radius: 6px;
+  margin-bottom: 7px;
 }
 
 .col-head h4 { font-size: 17px; font-weight: 900; color: var(--green-darker); line-height: 1.5; }
@@ -703,12 +702,12 @@ section { padding: 88px 0; }
 .final-copy p { margin-top: 16px; font-size: 16px; color: rgba(255, 255, 255, .85); }
 
 .final-panel {
-  max-width: 620px;
-  margin: 34px auto 0;
-  background: rgba(0, 0, 0, .22);
-  border: 1.5px solid rgba(232, 207, 142, .55);
-  border-radius: 18px;
-  padding: 28px 44px 32px;
+  max-width: 620px;
+  margin: 34px auto 0;
+  background: rgba(0, 0, 0, .22);
+  border: 1.5px solid rgba(232, 207, 142, .55);
+  border-radius: 18px;
+  padding: 28px 44px 32px;
 }
 
 .final-laurel { display: flex; align-items: center; justify-content: center; gap: 34px; }
@@ -730,12 +729,12 @@ section { padding: 88px 0; }
 .countdown { display: flex; gap: 10px; margin-top: 10px; }
 
 .countdown .unit {
-  background: rgba(255, 255, 255, .1);
-  border: 1px solid rgba(232, 207, 142, .5);
-  border-radius: 10px;
-  padding: 8px 0 6px;
-  min-width: 64px;
-  text-align: center;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(232, 207, 142, .5);
+  border-radius: 10px;
+  padding: 8px 0 6px;
+  min-width: 64px;
+  text-align: center;
 }
 
 .countdown .n { font-size: 26px; font-weight: 900; color: var(--gold-light); line-height: 1.2; }
@@ -750,12 +749,12 @@ section { padding: 88px 0; }
 footer { background: var(--green-darker); padding: 28px 0; }
 
 .footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
 .footer-inner img { height: 22px; }
@@ -763,183 +762,135 @@ footer { background: var(--green-darker); padding: 28px 0; }
 
 /* ===== Responsive ===== */
 @media (max-width: 960px) {
-  br.sp { display: inline; }
-  br.pc { display: none; }
-  section { padding: 64px 0; }
-  .container { padding: 0 20px; }
-  .cta-btn { width: 100%; font-size: 15px; padding: 18px 20px; flex-wrap: wrap; gap: 4px 10px; }
-  .fv-logo { top: 3.6vw; left: 4.6vw; width: clamp(80px, 28vw, 200px); }
-  .fv-cta { left: 16px; right: 16px; bottom: 0; transform: translateY(50%); }
-  .fv-cta .cta-btn {
-    width: 100%;
-    font-size: 15.5px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 3px;
-    padding: 14px 34px;
-    line-height: 1.38;
-    position: relative;
-  }
-  .fv-cta .cta-btn .lb { white-space: nowrap; text-align: center; }
-  .fv-cta .cta-btn small { font-size: 11.5px; }
-  .fv-cta .cta-btn .arrow { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 14px; }
-  .fv + section { padding-top: 56px; }
+  br.sp { display: inline; }
+  br.pc { display: none; }
+  section { padding: 64px 0; }
+  .container { padding: 0 20px; }
+  .cta-btn { width: 100%; font-size: 15px; padding: 18px 20px; flex-wrap: wrap; gap: 4px 10px; }
+  .fv-logo { top: 3.6vw; left: 4.6vw; width: clamp(80px, 28vw, 200px); }
+  .fv-cta { left: 16px; right: 16px; bottom: 0; transform: translateY(50%); }
+  .fv-cta .cta-btn {
+    width: 100%;
+    font-size: 15.5px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 3px;
+    padding: 14px 34px;
+    line-height: 1.38;
+    position: relative;
+  }
+  .fv-cta .cta-btn .lb { white-space: nowrap; text-align: center; }
+  .fv-cta .cta-btn small { font-size: 11.5px; }
+  .fv-cta .cta-btn .arrow { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 14px; }
+  .fv + section { padding-top: 56px; }
 
-  .section-title { font-size: 24px; }
-  .problem-grid, .offer-grid, .case-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 24px; }
+  .problem-grid, .offer-grid, .case-grid { grid-template-columns: 1fr; }
 
-  /* Case cards: keep the background crop proportional on tablet/mobile. */
-  .case-photo {
-    height: auto;
-    aspect-ratio: 16 / 9;
-    min-height: 200px;
-    max-height: 360px;
-  }
-  .network-card { padding: 26px 18px 22px; border-radius: 16px; }
-  .nc-main { grid-template-columns: 1fr; gap: 4px; margin-bottom: 30px; }
-  .nc-title { font-size: 20px; margin-bottom: 16px; }
-  .agency-logos { gap: 8px; margin-bottom: 18px; }
-  .agency-logos span { padding: 7px 14px; font-size: 13px; }
-  .nc-photo { max-width: 320px; margin: 0 auto; }
-  .nc-stats { grid-template-columns: 1fr; gap: 22px; padding-top: 26px; }
-  .nc-stat + .nc-stat { border-left: none; border-top: 1px solid var(--line); padding-top: 22px; }
-  .cmpx {
-    min-width: 0 !important;
-    width: 100%;
-    grid-template-columns: 0.8fr 1.1fr 1.1fr;
-  }
-  .cmpx-title { gap: 10px; }
-  .cmpx-title h2 { font-size: 19px; }
-  .cmpx-divider { margin: 12px auto 30px; }
-  .cmpx-scroll { overflow-x: hidden; -webkit-overflow-scrolling: touch; margin: 0 0px; padding: 20px 0 34px; }
-  .cmpx { min-width: 640px; grid-template-columns: .66fr 1.4fr 1.0fr; }
-  .scroll-hint { display: none !important; }
-  .cmpx-head {
-    font-size: 11px;
-    height: 48px;
-    padding: 0 4px;
-    text-align: center;
-  }
-  .cmpx-col .cell { min-height: 76px; padding: 0 16px; gap: 12px; }
-  .cmpx-col.labels .cell {
-    font-size: 11px;             /* 左端ラベル文字サイズ */
-    padding: 0 4px;
-    gap: 4px;
-  }
-  .cmpx-col.labels .ic { width: 34px; height: 34px; }
-  .cmpx-col.labels .ic svg { width: 17px; height: 17px; }
-  .cmpx-col.kiten { margin: -20px 0; padding-bottom: 20px; }
-  .cmpx-col.kiten .cmpx-head { height: 76px; }
-  .cmpx-col.kiten .cell {
-    padding: 0 6px;
-  }
-  .cmpx-col.kiten .cell p {
-    font-size: 12px;
-    white-space: normal;
-  }
-  .cmpx-col.kiten .cell em.big {
-    font-size: 16px;
-  }
-  .cmpx-col.normal .cell {
-    font-size: 11px;
-    padding: 0 6px;
-    line-height: 1.3;
-  }
-  .cmpx .ic, 
-  .cmpx .yen {
-    width: 28px;
-    height: 28px;
-    font-size: 10px;
-  }
-  .cmpx .ic svg {
-    width: 14px;
-    height: 14px;
-  }
-  .cmpx .yen { font-size: 14px; }
-  .cmpx-pill {
-    font-size: 11px;
-    padding: 6px 14px;
-    bottom: -16px;
-    width: 90%;
-    justify-content: center;
-  }
-  .cmpx-pill svg { width: 19px; height: 17px; }
-  .system-grid { grid-template-columns: 1fr; }
-  .capa { padding: 28px 18px 22px; border-radius: 16px; }
-  .capa h4 { font-size: 19px; }
-  .capa-lead { margin-bottom: 30px; text-align: left; }
-  .capa-flow { flex-wrap: wrap; gap: 22px 8px; }
-  .capa-flow .tri { display: none; }
-  .cstep { width: 30%; }
-  .cstep .circle { width: 84px; height: 84px; }
-  .cstep .circle svg { width: 36px; height: 36px; }
-  .cstep .lb { font-size: 13px; }
-  .capa-facts { grid-template-columns: 1fr; padding: 8px 18px; }
-  .fact { justify-content: flex-start; padding: 14px 0; }
-  .fact + .fact { border-left: none; border-top: 1px solid #DBDBD3; }
-  .fact .fic { width: 38px; height: 38px; }
-  .fact .ft { font-size: 15px; }
-  .fact .fd { font-size: 12.5px; }
-  .sec-gold .section-title { font-size: 25px; }
-  .gold-divider span { width: 70px; }
-  .joken-card, .flow-card { padding: 28px 20px; border-radius: 14px; }
-  .joken-card h3 { font-size: 21px; }
-  .jk-icon { width: 38px; height: 38px; }
-  .apply-cols { grid-template-columns: 1fr; gap: 20px; }
-  .jk-photo { height: 110px; }
-  .jk-body { padding: 16px 18px 20px; }
-  .jk-list { grid-template-columns: 1fr; gap: 18px; }
-  .flow3 { grid-template-columns: 1fr; }
-  .flow3 .col { padding: 20px 4px; }
-  .flow3 .col:first-child { padding-top: 4px; }
-  .flow3 .col + .col::before { content: '▼'; left: 50%; top: -8px; transform: translateX(-50%); font-size: 14px; }
-  .jk-lead { text-align: left; }
-  .fl-title { font-size: 19px; gap: 10px; }
-  .fl-title span { width: 22px; }
-  .fl-icon { width: 58px; height: 58px; }
-  .fl-icon svg { width: 28px; height: 28px; }
-  .sec-cta { margin-top: 48px; }
-  .sec-cta .cb-lead { font-size: 15px; }
-  .offer-card h3 { font-size: 18px; }
-  .offer-card h3 .em { font-size: 22px; }
-  .section-lead.lead-strong { font-size: 16.5px; }
-  .final-panel { padding: 22px 18px 26px; margin-top: 26px; }
-  .cta-guide { margin: -10px 0 10px; }
-  .cta-guide svg { width: 26px; height: 26px; }
-  .sec-cta .cta-btn {
-    width: 100%;
-    font-size: 15.5px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 3px;
-    padding: 14px 34px;
-    line-height: 1.38;
-    position: relative;
-  }
-  .sec-cta .cta-btn .lb { white-space: normal; text-align: center; }
-  .sec-cta .cta-btn small { font-size: 11.5px; }
-  .sec-cta .cta-btn .arrow { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 14px; }
-  .reg-note { flex-direction: column; align-items: stretch; }
-  .reg-photo { width: 100%; height: 110px; }
-  .final-laurel { flex-direction: column; gap: 16px; }
-  .final-laurel .deadline { text-align: center; }
-  .final-grid { grid-template-columns: 1fr; gap: 36px; }
-  .final-copy h2 { font-size: 15px; }
-  .final-copy h2 .l2 { font-size: 17px; }
-  .final-copy h2 .kw { font-size: 21px; }
-  .final-copy h2 .kw2 { font-size: 25px; }
-  .entry-cta .cta-btn { font-size: 17px; padding: 17px 16px; gap: 2px 8px; }
-  .entry-cta .cta-btn small { font-size: 12px; }
-  .countdown .unit { min-width: 0; flex: 1; }
-  section {
-    overflow: hidden;
-  }
-
-  .arrow-next::after {
-    bottom: -14px;
-    width: 28px;   /* さらに小さく調整 */
-    height: 14px;  /* 高さも小さく */
-  }
+  /* Case cards: keep the background crop proportional on tablet/mobile. */
+  .case-photo {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+    max-height: 360px;
+  }
+  .network-card { padding: 26px 18px 22px; border-radius: 16px; }
+  .nc-main { grid-template-columns: 1fr; gap: 4px; margin-bottom: 30px; }
+  .nc-title { font-size: 20px; margin-bottom: 16px; }
+  .agency-logos { gap: 8px; margin-bottom: 18px; }
+  .agency-logos span { padding: 7px 14px; font-size: 13px; }
+  .nc-photo { max-width: 320px; margin: 0 auto; }
+  .nc-stats { grid-template-columns: 1fr; gap: 22px; padding-top: 26px; }
+  .nc-stat + .nc-stat { border-left: none; border-top: 1px solid var(--line); padding-top: 22px; }
+  .cmpx-title { gap: 10px; }
+  .cmpx-title h2 { font-size: 19px; }
+  .cmpx-divider { margin: 12px auto 30px; }
+  .cmpx-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -20px; padding: 24px 14px 54px; }
+  .cmpx { min-width: 640px; grid-template-columns: .66fr 1.4fr 1.0fr; }
+  .scroll-hint { display: flex; }
+  .cmpx-head { height: 56px; font-size: 16px; }
+  .cmpx-col .cell { min-height: 76px; padding: 0 16px; gap: 12px; }
+  .cmpx-col.labels .cell { padding: 0 8px; gap: 6px; font-size: 12.5px; line-height: 1.3; letter-spacing: -.02em; white-space: nowrap; }
+  .cmpx-col.labels .ic { width: 34px; height: 34px; }
+  .cmpx-col.labels .ic svg { width: 17px; height: 17px; }
+  .cmpx-col.kiten { margin: -20px 0; padding-bottom: 20px; }
+  .cmpx-col.kiten .cmpx-head { height: 76px; }
+  .cmpx-col.kiten .cell { padding: 0 18px; }
+  .cmpx-col.kiten .cell p { font-size: 16.5px; }
+  .cmpx-col.kiten .cell em.big { font-size: 22px; }
+  .cmpx-col.normal .cell { font-size: 13.5px; }
+  .cmpx .ic, .cmpx .yen { width: 44px; height: 44px; }
+  .cmpx .ic svg { width: 21px; height: 21px; }
+  .cmpx .yen { font-size: 14px; }
+  .cmpx-pill { font-size: 13px; padding: 8px 18px; bottom: -20px; gap: 7px; }
+  .cmpx-pill svg { width: 19px; height: 17px; }
+  .system-grid { grid-template-columns: 1fr; }
+  .capa { padding: 28px 18px 22px; border-radius: 16px; }
+  .capa h4 { font-size: 19px; }
+  .capa-lead { margin-bottom: 30px; text-align: left; }
+  .capa-flow { flex-wrap: wrap; gap: 22px 8px; }
+  .capa-flow .tri { display: none; }
+  .cstep { width: 30%; }
+  .cstep .circle { width: 84px; height: 84px; }
+  .cstep .circle svg { width: 36px; height: 36px; }
+  .cstep .lb { font-size: 13px; }
+  .capa-facts { grid-template-columns: 1fr; padding: 8px 18px; }
+  .fact { justify-content: flex-start; padding: 14px 0; }
+  .fact + .fact { border-left: none; border-top: 1px solid #DBDBD3; }
+  .fact .fic { width: 38px; height: 38px; }
+  .fact .ft { font-size: 15px; }
+  .fact .fd { font-size: 12.5px; }
+  .sec-gold .section-title { font-size: 25px; }
+  .gold-divider span { width: 70px; }
+  .joken-card, .flow-card { padding: 28px 20px; border-radius: 14px; }
+  .joken-card h3 { font-size: 21px; }
+  .jk-icon { width: 38px; height: 38px; }
+  .apply-cols { grid-template-columns: 1fr; gap: 20px; }
+  .jk-photo { height: 110px; }
+  .jk-body { padding: 16px 18px 20px; }
+  .jk-list { grid-template-columns: 1fr; gap: 18px; }
+  .flow3 { grid-template-columns: 1fr; }
+  .flow3 .col { padding: 20px 4px; }
+  .flow3 .col:first-child { padding-top: 4px; }
+  .flow3 .col + .col::before { content: '▼'; left: 50%; top: -8px; transform: translateX(-50%); font-size: 14px; }
+  .jk-lead { text-align: left; }
+  .fl-title { font-size: 19px; gap: 10px; }
+  .fl-title span { width: 22px; }
+  .fl-icon { width: 58px; height: 58px; }
+  .fl-icon svg { width: 28px; height: 28px; }
+  .sec-cta { margin-top: 48px; }
+  .sec-cta .cb-lead { font-size: 15px; }
+  .offer-card h3 { font-size: 18px; }
+  .offer-card h3 .em { font-size: 22px; }
+  .section-lead.lead-strong { font-size: 16.5px; }
+  .final-panel { padding: 22px 18px 26px; margin-top: 26px; }
+  .cta-guide { margin: -10px 0 10px; }
+  .cta-guide svg { width: 26px; height: 26px; }
+  .sec-cta .cta-btn {
+    width: 100%;
+    font-size: 15.5px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 3px;
+    padding: 14px 34px;
+    line-height: 1.38;
+    position: relative;
+  }
+  .sec-cta .cta-btn .lb { white-space: normal; text-align: center; }
+  .sec-cta .cta-btn small { font-size: 11.5px; }
+  .sec-cta .cta-btn .arrow { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 14px; }
+  .reg-note { flex-direction: column; align-items: stretch; }
+  .reg-photo { width: 100%; height: 110px; }
+  .final-laurel { flex-direction: column; gap: 16px; }
+  .final-laurel .deadline { text-align: center; }
+  .final-grid { grid-template-columns: 1fr; gap: 36px; }
+  .final-copy h2 { font-size: 15px; }
+  .final-copy h2 .l2 { font-size: 17px; }
+  .final-copy h2 .kw { font-size: 21px; }
+  .final-copy h2 .kw2 { font-size: 25px; }
+  .entry-cta .cta-btn { font-size: 17px; padding: 17px 16px; gap: 2px 8px; }
+  .entry-cta .cta-btn small { font-size: 12px; }
+  .countdown .unit { min-width: 0; flex: 1; }
 }
 </style>
 </head>
@@ -947,374 +898,374 @@ footer { background: var(--green-darker); padding: 28px 0; }
 
 <!-- 1. FV -->
 <div class="fv"><a class="fv-image"><picture>
-  <source media="(max-width: 960px)" srcset="assets/fv-top-sp_Ver2.png">
-  <img src="assets/fv-top-pc_Ver2.png" alt="競合と差をつけろ！芸能人キャスティングで、売れる広告へ。限定5社 キャスティングFee0円 7/17〜7/31 18:00まで">
+  <source media="(max-width: 960px)" srcset="assets/fv-top-sp_Ver2.png">
+  <img src="assets/fv-top-pc_Ver2.png" alt="競合と差をつけろ！芸能人キャスティングで、売れる広告へ。限定5社 キャスティングFee0円 7/17〜7/31 18:00まで">
 </picture></a>
-  <img class="fv-logo" src="assets/logo-kiten.png" alt="KITEN">
+  <img class="fv-logo" src="assets/logo-kiten.png" alt="KITEN">
 
-  <div class="fv-cta">
-    <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
-  </div>
+  <div class="fv-cta">
+    <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
+  </div>
 </div>
 
 <!-- 2. 悩み -->
 <section class="sec-soft arrow-next">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Your Challenge</div>
-      <h2 class="section-title">Web広告の成果に、<br class="sp">限界を感じていませんか？</h2>
-      <p class="section-lead">売れる商品があるのに、届け方がわからない企業様へ。こんなお悩みはありませんか？</p>
-    </div>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <div class="problem-head">
-          <img src="assets/icon-money.png" alt="">
-          <h3>高額な初期費用</h3>
-        </div>
-        <p>芸能人を起用したいが、数百万〜数千万円の初期費用・契約金が高すぎて手が出ない…</p>
-      </div>
-      <div class="problem-card">
-        <div class="problem-head">
-          <img src="assets/icon-chart.png" alt="">
-          <h3>高騰するCPA</h3>
-        </div>
-        <p>SNS広告のCPA（顧客獲得単価）が高騰し続け、従来の運用では利益が残りにくい…</p>
-      </div>
-      <div class="problem-card">
-        <div class="problem-head">
-          <img src="assets/icon-megaphone.png" alt="">
-          <h3>広がらない認知</h3>
-        </div>
-        <p>商品には絶対の自信があるのに、競合に埋もれて認知が広がらない…</p>
-      </div>
-    </div>
-  </div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Your Challenge</div>
+      <h2 class="section-title">Web広告の成果に、<br class="sp">限界を感じていませんか？</h2>
+      <p class="section-lead">売れる商品があるのに、届け方がわからない企業様へ。こんなお悩みはありませんか？</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-head">
+          <img src="assets/icon-money.png" alt="">
+          <h3>高額な初期費用</h3>
+        </div>
+        <p>芸能人を起用したいが、数百万〜数千万円の初期費用・契約金が高すぎて手が出ない…</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-head">
+          <img src="assets/icon-chart.png" alt="">
+          <h3>高騰するCPA</h3>
+        </div>
+        <p>SNS広告のCPA（顧客獲得単価）が高騰し続け、従来の運用では利益が残りにくい…</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-head">
+          <img src="assets/icon-megaphone.png" alt="">
+          <h3>広がらない認知</h3>
+        </div>
+        <p>商品には絶対の自信があるのに、競合に埋もれて認知が広がらない…</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- 3. オファー -->
 <section class="sec-green">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Our Offer</div>
-      <h2 class="section-title">そのお悩み、すべて<span class="accent">KITEN</span>が<br class="sp">解決します！</h2>
-      <p class="section-lead">「売れる商品」×「日本一のキャスティング」×「完全成果報酬」という新常識。</p>
-    </div>
-    <div class="offer-grid">
-      <div class="offer-card">
-        <span class="num-label">POINT 01</span>
-        <img class="icon-img" src="assets/icon-yen0.png" alt="¥0">
-        <h3>芸能人キャスティングFee<span class="em">0円</span></h3>
-        <p>通常は先出しで発生する莫大な「タレント契約料・アサイン費用」を、本キャンペーンではKITENが全額負担。初期コストゼロでスタートできます。</p>
-      </div>
-      <div class="offer-card">
-        <span class="num-label">POINT 02</span>
-        <img class="icon-img" src="assets/icon-handshake.png" alt="">
-        <h3>リスクを極限まで抑える<span class="em">完全成果報酬広告</span></h3>
-        <p>毎月固定の運用手数料はいただきません。ご請求は、事前に合意した成果（購入・申込など）が発生した分だけ。成果が出なければ請求もゼロです。</p>
-      </div>
-      <div class="offer-card">
-        <span class="num-label">POINT 03</span>
-        <img class="icon-img" src="assets/icon-monitor.png" alt="">
-        <h3>クリエイティブ制作・撮影も<span class="em">成果報酬枠で実施</span></h3>
-        <p>地上波番組を手がけるTV制作会社との共同体制により、ハイクオリティな動画・ドラマ撮影も成果報酬の枠内で実施できます（※獲得条件に準じます）。</p>
-      </div>
-    </div>
-    
-    <div class="cmpx-wrap">
-    <div class="cmpx-title">
-      <h2><span class="kiten">KITEN</span>がその<em>リスク</em>と<em>費用</em>を<br class="sp">すべて引き受けます</h2>
-    </div>
-    <div class="cmpx-divider"><span></span><i>✦</i><span></span></div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Our Offer</div>
+      <h2 class="section-title">そのお悩み、すべて<span class="accent">KITEN</span>が<br class="sp">解決します！</h2>
+      <p class="section-lead">「売れる商品」×「日本一のキャスティング」×「完全成果報酬」という新常識。</p>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card">
+        <span class="num-label">POINT 01</span>
+        <img class="icon-img" src="assets/icon-yen0.png" alt="¥0">
+        <h3>芸能人キャスティングFee<span class="em">0円</span></h3>
+        <p>通常は先出しで発生する莫大な「タレント契約料・アサイン費用」を、本キャンペーンではKITENが全額負担。初期コストゼロでスタートできます。</p>
+      </div>
+      <div class="offer-card">
+        <span class="num-label">POINT 02</span>
+        <img class="icon-img" src="assets/icon-handshake.png" alt="">
+        <h3>リスクを極限まで抑える<span class="em">完全成果報酬広告</span></h3>
+        <p>毎月固定の運用手数料はいただきません。ご請求は、事前に合意した成果（購入・申込など）が発生した分だけ。成果が出なければ請求もゼロです。</p>
+      </div>
+      <div class="offer-card">
+        <span class="num-label">POINT 03</span>
+        <img class="icon-img" src="assets/icon-monitor.png" alt="">
+        <h3>クリエイティブ制作・撮影も<span class="em">成果報酬枠で実施</span></h3>
+        <p>地上波番組を手がけるTV制作会社との共同体制により、ハイクオリティな動画・ドラマ撮影も成果報酬の枠内で実施できます（※獲得条件に準じます）。</p>
+      </div>
+    </div>
+    
+    <div class="cmpx-wrap">
+    <div class="cmpx-title">
+      <h2><span class="kiten">KITEN</span>がその<em>リスク</em>と<em>費用</em>を<br class="sp">すべて引き受けます</h2>
+    </div>
+    <div class="cmpx-divider"><span></span><i>✦</i><span></span></div>
 
-    <div class="cmpx-outer"><div class="cmpx-scroll"><div class="cmpx">
-      <div class="cmpx-col labels">
-        <div class="cmpx-head"></div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-4-3-6.5-7.5-6.5C4.5 11 7.5 13 12 13z"/><path d="M12 13c0-4 3-6.5 7.5-6.5C19.5 11 16.5 13 12 13z"/></svg></span>初期費用</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>タレント費用</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span>運用手数料</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>成果条件</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>リスク負担</div>
-      </div>
-      <div class="cmpx-col normal">
-        <div class="cmpx-head">通常の予算型（Feeモデル）</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>初期費用が高い</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>タレント費用が先出し</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span>運用手数料が固定で発生</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6 6 4-4 8 8"/><path d="M14 17h7v-7"/></svg></span>成果が出なくても費用がかかる</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4L2.5 20.5h19L12 4z"/><path d="M12 10v4"/><path d="M12 17.5h.01"/></svg></span>企業側のリスクが大きい</div>
-      </div>
-      <div class="cmpx-col kiten">
-        <div class="cmpx-head">KITENの成果報酬モデル</div>
-        <div class="cell"><span class="yen">¥0</span><p>初期費用<em class="big">0</em>でスタート</p></div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><p>キャスティングFee <em class="big">0</em><em>円</em></p></div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span><p>成果発生時<em>のみ</em>請求</p></div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><p>成果が<em>出た分だけ</em>請求</p></div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><p>リスクは<em>KITEN側が負担</em></p></div>
-        <div class="cmpx-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="13" height="10" rx="2"/><path d="M15 10.5l7-3.5v10l-7-3.5z"/></svg><span>クリエイティブ制作・撮影も対応</span></div>
-      </div>
-    </div>
+    <div class="cmpx-outer"><div class="cmpx-scroll"><div class="cmpx">
+      <div class="cmpx-col labels">
+        <div class="cmpx-head"></div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-4-3-6.5-7.5-6.5C4.5 11 7.5 13 12 13z"/><path d="M12 13c0-4 3-6.5 7.5-6.5C19.5 11 16.5 13 12 13z"/></svg></span>初期費用</div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>タレント費用</div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span>運用手数料</div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>成果条件</div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>リスク負担</div>
+      </div>
+      <div class="cmpx-col normal">
+        <div class="cmpx-head">通常の予算型（Feeモデル）</div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>初期費用が高い</div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>タレント費用が先出し</div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span>運用手数料が固定で発生</div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6 6 4-4 8 8"/><path d="M14 17h7v-7"/></svg></span>成果が出なくても費用がかかる</div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4L2.5 20.5h19L12 4z"/><path d="M12 10v4"/><path d="M12 17.5h.01"/></svg></span>企業側のリスクが大きい</div>
+      </div>
+      <div class="cmpx-col kiten">
+        <div class="cmpx-head">KITENの成果報酬モデル</div>
+        <div class="cell"><span class="yen">¥0</span><p>初期費用<em class="big">0</em>でスタート</p></div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><p>キャスティングFee <em class="big">0</em><em>円</em></p></div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span><p>成果発生時<em>のみ</em>請求</p></div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><p>成果が<em>出た分だけ</em>請求</p></div>
+        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><p>リスクは<em>KITEN側が負担</em></p></div>
+        <div class="cmpx-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="13" height="10" rx="2"/><path d="M15 10.5l7-3.5v10l-7-3.5z"/></svg><span>クリエイティブ制作・撮影も対応</span></div>
+      </div>
+    </div>
 </div>
-    </div>
+    </div>
 
-    </div>
+    </div>
 
-    <div class="sec-cta">
-      <p class="cb-lead">＼ 7/31(金)18:00締切・限定5社の審査制 ／</p>
-      <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
-    </div>
-  </div>
+    <div class="sec-cta">
+      <p class="cb-lead">＼ 7/31(金)18:00締切・限定5社の審査制 ／</p>
+      <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
+    </div>
+  </div>
 </section>
 
 <!-- 4. Why KITEN -->
 <section>
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Why KITEN</div>
-      <h2 class="section-title">「なぜキャスティング<span class="nw">Fee 0円</span>・<br class="sp">成果報酬でできるのか？」</h2>
-      <p class="section-lead lead-strong"><em class="mk">日本一のキャスティング実績</em>と、<em class="mk">圧倒的な内製体制</em>に裏付けられた自信があるからです。</p>
-    </div>
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Why KITEN</div>
+      <h2 class="section-title">「なぜキャスティング<span class="nw">Fee 0円</span>・<br class="sp">成果報酬でできるのか？」</h2>
+      <p class="section-lead lead-strong"><em class="mk">日本一のキャスティング実績</em>と、<em class="mk">圧倒的な内製体制</em>に裏付けられた自信があるからです。</p>
+    </div>
 
-    <div class="network-card">
-      <div class="nc-main">
-        <div class="nc-info">
-          <h3 class="nc-title">業界最大級！<br><span class="accent">500名以上</span>のタレント・<br class="sp"><span class="nw">著名人ネットワーク</span></h3>
-          <div class="agency-logos">
-            <span>avex</span><span>HORIPRO</span><span>プロダクション人力舎</span><span>ワタナベエンターテインメント</span><span>吉本興業</span><span>ほか多数</span>
-          </div>
-          <p class="nc-note">大手芸能事務所との直接取引で中間マージンを排除。商材に合った「売れる人選」を、スピーディかつ柔軟な条件でアサインできます。</p>
-        </div>
-        <img class="nc-photo" src="assets/nc-talents.jpg" alt="所属タレントのイメージ">
-      </div>
-      <div class="nc-stats">
-        <div class="nc-stat">
-          <span class="nc-ic"><img src="assets/icon-people.png" alt=""></span>
-          <div class="label">タレント・著名人ネットワーク</div>
-          <div class="value">500<small>名以上</small></div>
-          <div class="sub">業界最大級のアサイン実績</div>
-        </div>
-        <div class="nc-stat">
-          <span class="nc-ic"><img src="assets/icon-monitor.png" alt=""></span>
-          <div class="label">月間動画制作キャパシティ</div>
-          <div class="value">15,000<small>本</small></div>
-          <div class="sub">調査から検証まで完全内製</div>
-        </div>
-        <div class="nc-stat">
-          <span class="nc-ic"><img src="assets/icon-chart.png" alt=""></span>
-          <div class="label">支援先のグロース実績</div>
-          <div class="value">最大12<small>倍</small></div>
-          <div class="sub">月間売上の成長率</div>
-        </div>
-      </div>
-    </div>
+    <div class="network-card">
+      <div class="nc-main">
+        <div class="nc-info">
+          <h3 class="nc-title">業界最大級！<br><span class="accent">500名以上</span>のタレント・<br class="sp"><span class="nw">著名人ネットワーク</span></h3>
+          <div class="agency-logos">
+            <span>avex</span><span>HORIPRO</span><span>プロダクション人力舎</span><span>ワタナベエンターテインメント</span><span>吉本興業</span><span>ほか多数</span>
+          </div>
+          <p class="nc-note">大手芸能事務所との直接取引で中間マージンを排除。商材に合った「売れる人選」を、スピーディかつ柔軟な条件でアサインできます。</p>
+        </div>
+        <img class="nc-photo" src="assets/nc-talents.jpg" alt="所属タレントのイメージ">
+      </div>
+      <div class="nc-stats">
+        <div class="nc-stat">
+          <span class="nc-ic"><img src="assets/icon-people.png" alt=""></span>
+          <div class="label">タレント・著名人ネットワーク</div>
+          <div class="value">500<small>名以上</small></div>
+          <div class="sub">業界最大級のアサイン実績</div>
+        </div>
+        <div class="nc-stat">
+          <span class="nc-ic"><img src="assets/icon-monitor.png" alt=""></span>
+          <div class="label">月間動画制作キャパシティ</div>
+          <div class="value">15,000<small>本</small></div>
+          <div class="sub">調査から検証まで完全内製</div>
+        </div>
+        <div class="nc-stat">
+          <span class="nc-ic"><img src="assets/icon-chart.png" alt=""></span>
+          <div class="label">支援先のグロース実績</div>
+          <div class="value">最大12<small>倍</small></div>
+          <div class="sub">月間売上の成長率</div>
+        </div>
+      </div>
+    </div>
 
-    <h3 class="sub-heading">キャスティング支援のグロース実績</h3>
-    <div class="case-grid">
-      <div class="case-card">
-        <div class="case-photo p1"></div>
-        <div class="case-body">
-          <span class="case-tag">痩身クリニック</span>
-          <div class="case-talent">キャスティング：著名活動家K 様</div>
-          <div class="case-stats">
-            <div class="case-stat"><div class="k">月間売上</div><div class="v">1,200万円 → 1億4,400万円<br><em>12<small>倍</small></em>に成長</div></div>
-            <div class="case-stat"><div class="k">CVR（コンバージョン率）</div><div class="v"><em>159<small>%</small></em>向上</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="case-photo p2"></div>
-        <div class="case-body">
-          <span class="case-tag">美容クリニック（AGA）</span>
-          <div class="case-talent">キャスティング：有名芸能人K 様、有名芸能人N 様、人気タレントM 様</div>
-          <div class="case-stats">
-            <div class="case-stat"><div class="k">獲得件数</div><div class="v">1,000件 → 12,000件<br><em>12<small>倍</small></em>に増加</div></div>
-            <div class="case-stat"><div class="k">月間売上</div><div class="v">600万円 → 4,800万円<br><em>8<small>倍</small></em>／CVR 30%</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-card">
-        <div class="case-photo p3"></div>
-        <div class="case-body">
-          <span class="case-tag">泌尿器系クリニック</span>
-          <div class="case-talent">キャスティング：有名芸能人S 様</div>
-          <div class="case-stats">
-            <div class="case-stat"><div class="k">獲得件数</div><div class="v">500件 → 4,000件<br><em>8<small>倍</small></em>に増加</div></div>
-            <div class="case-stat"><div class="k">月間売上</div><div class="v">2,250万円 → 2億2,500万円<br><em>10<small>倍</small></em>／CVR 25%</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="case-note">※実績数値は支援事例の一例です。成果を保証するものではありません。</p>
+    <h3 class="sub-heading">キャスティング支援のグロース実績</h3>
+    <div class="case-grid">
+      <div class="case-card">
+        <div class="case-photo p1"></div>
+        <div class="case-body">
+          <span class="case-tag">痩身クリニック</span>
+          <div class="case-talent">キャスティング：著名活動家K 様</div>
+          <div class="case-stats">
+            <div class="case-stat"><div class="k">月間売上</div><div class="v">1,200万円 → 1億4,400万円<br><em>12<small>倍</small></em>に成長</div></div>
+            <div class="case-stat"><div class="k">CVR（コンバージョン率）</div><div class="v"><em>159<small>%</small></em>向上</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-photo p2"></div>
+        <div class="case-body">
+          <span class="case-tag">美容クリニック（AGA）</span>
+          <div class="case-talent">キャスティング：有名芸能人K 様、有名芸能人N 様、人気タレントM 様</div>
+          <div class="case-stats">
+            <div class="case-stat"><div class="k">獲得件数</div><div class="v">1,000件 → 12,000件<br><em>12<small>倍</small></em>に増加</div></div>
+            <div class="case-stat"><div class="k">月間売上</div><div class="v">600万円 → 4,800万円<br><em>8<small>倍</small></em>／CVR 30%</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-photo p3"></div>
+        <div class="case-body">
+          <span class="case-tag">泌尿器系クリニック</span>
+          <div class="case-talent">キャスティング：有名芸能人S 様</div>
+          <div class="case-stats">
+            <div class="case-stat"><div class="k">獲得件数</div><div class="v">500件 → 4,000件<br><em>8<small>倍</small></em>に増加</div></div>
+            <div class="case-stat"><div class="k">月間売上</div><div class="v">2,250万円 → 2億2,500万円<br><em>10<small>倍</small></em>／CVR 25%</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="case-note">※実績数値は支援事例の一例です。成果を保証するものではありません。</p>
 
-    <div class="sec-cta mid">
-      <p class="cb-lead">＼ 限定5社・7月31日(金)18:00締切 ／</p>
-      <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
-    </div>
+    <div class="sec-cta mid">
+      <p class="cb-lead">＼ 限定5社・7月31日(金)18:00締切 ／</p>
+      <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
+    </div>
 
 
-    <div class="system-grid">
-      <div class="capa">
-        <h4>月間15,000本の動画制作キャパシティと一気通貫体制</h4>
-        <p class="capa-lead"><strong>【調査 → 企画 → 制作 → 広告運用 → PDCA検証】</strong>のすべての工程を、自社内で完全完結します。</p>
-        <div class="capa-flow">
-          <div class="cstep"><span class="no">01</span><span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span class="lb">調査</span></div>
-          <span class="tri">▶</span>
-          <div class="cstep"><span class="no">02</span><span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4a3 3 0 0 1 6 0"/><path d="M12 9.5a2.8 2.8 0 0 1 1.7 5c-.4.3-.7.7-.7 1.2h-2c0-.5-.3-.9-.7-1.2a2.8 2.8 0 0 1 1.7-5z"/><path d="M11 17.8h2"/></svg></span><span class="lb">企画</span></div>
-          <span class="tri">▶</span>
-          <div class="cstep"><span class="no">03</span><span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7.5" width="13" height="9.5" rx="2"/><path d="M15.5 10.8l6-3v9l-6-3z"/><path d="M7.2 10.4l3.4 1.9-3.4 1.9z"/></svg></span><span class="lb">制作</span></div>
-          <span class="tri">▶</span>
-          <div class="cstep"><span class="no">04</span><span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20v-5M10 20v-9M15 20v-6"/><path d="M5 11.5l5-4 4 3 5.5-6"/><path d="M15.5 4.5h4v4"/></svg></span><span class="lb">広告運用</span></div>
-          <span class="tri">▶</span>
-          <div class="cstep"><span class="no">05</span><span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M18.5 2.8v4h-4"/><path d="M9 15.5v-3M12 15.5v-5.5M15 15.5v-2"/></svg></span><span class="lb">PDCA検証</span></div>
-        </div>
-        <div class="capa-facts">
-          <div class="fact"><span class="fic"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="7.5" r="3.2"/><path d="M2.8 19.5c.7-3.6 3-5.4 6.2-5.4s5.5 1.8 6.2 5.4z"/><circle cx="17" cy="8.5" r="2.6"/><path d="M16.4 14.6c2.8.3 4.6 1.9 5.2 4.9h-4.2c-.3-2-1-3.6-2.2-4.7.4-.1.8-.2 1.2-.2z"/></svg></span><div><p class="ft">専属マーケター<br>2名以上＋制作部隊</p><p class="fd">1商材ごとに専属チームを編成し、戦略から運用まで伴走します。</p></div></div>
-          <div class="fact"><span class="fic"><svg viewBox="0 0 24 24" fill="none"><circle cx="13.5" cy="12" r="7.5" fill="currentColor"/><path d="M13.5 7.5V12l3 1.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M1.5 8.5h4.5M.8 12h4.2M1.5 15.5h4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span><div><p class="ft">月間最大15,000本の<br>ABテスト体制</p><p class="fd">膨大な量のABテストを高速で回し、短期間で数値を改善します。</p></div></div>
-          <div class="fact"><span class="fic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M8.5 7l3.5 5 3.5-5M12 12v5.5M9.3 12.8h5.4M9.3 15.2h5.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><p class="ft">外部制作会社を挟まず<br>間接コストゼロ</p><p class="fd">制作・運用を自社で完結し、余計な中間費用を徹底カットしています。</p></div></div>
-        </div>
-      </div>
-      <div class="reg-note">
-        <img class="reg-photo" src="assets/reg-check.jpg" alt="クリエイティブチェックの様子">
-        <div>
-          <h4>薬機法・景表法も安心。専門部隊によるトリプル・レギュレーション監査</h4>
-          <p>「過激な表現でブランドが傷つくのでは…」という心配は無用です。専門部隊が<strong>薬機法・景表法などの広告関連法令、各SNSの最新ガイドライン、貴社のブランドトーン</strong>を徹底遵守。クリーンで成果の出るクリエイティブを担保します。</p>
-        </div>
-      </div>
-    </div>
+    <div class="system-grid">
+      <div class="capa">
+        <h4>月間15,000本の動画制作キャパシティと一気通貫体制</h4>
+        <p class="capa-lead"><strong>【調査 → 企画 → 制作 → 広告運用 → PDCA検証】</strong>のすべての工程を、自社内で完全完結します。</p>
+        <div class="capa-flow">
+          <div class="cstep"><span class="no">01</span><span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span class="lb">調査</span></div>
+          <span class="tri">▶</span>
+          <div class="cstep"><span class="no">02</span><span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4a3 3 0 0 1 6 0"/><path d="M12 9.5a2.8 2.8 0 0 1 1.7 5c-.4.3-.7.7-.7 1.2h-2c0-.5-.3-.9-.7-1.2a2.8 2.8 0 0 1 1.7-5z"/><path d="M11 17.8h2"/></svg></span><span class="lb">企画</span></div>
+          <span class="tri">▶</span>
+          <div class="cstep"><span class="no">03</span><span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7.5" width="13" height="9.5" rx="2"/><path d="M15.5 10.8l6-3v9l-6-3z"/><path d="M7.2 10.4l3.4 1.9-3.4 1.9z"/></svg></span><span class="lb">制作</span></div>
+          <span class="tri">▶</span>
+          <div class="cstep"><span class="no">04</span><span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20v-5M10 20v-9M15 20v-6"/><path d="M5 11.5l5-4 4 3 5.5-6"/><path d="M15.5 4.5h4v4"/></svg></span><span class="lb">広告運用</span></div>
+          <span class="tri">▶</span>
+          <div class="cstep"><span class="no">05</span><span class="circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M18.5 2.8v4h-4"/><path d="M9 15.5v-3M12 15.5v-5.5M15 15.5v-2"/></svg></span><span class="lb">PDCA検証</span></div>
+        </div>
+        <div class="capa-facts">
+          <div class="fact"><span class="fic"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="7.5" r="3.2"/><path d="M2.8 19.5c.7-3.6 3-5.4 6.2-5.4s5.5 1.8 6.2 5.4z"/><circle cx="17" cy="8.5" r="2.6"/><path d="M16.4 14.6c2.8.3 4.6 1.9 5.2 4.9h-4.2c-.3-2-1-3.6-2.2-4.7.4-.1.8-.2 1.2-.2z"/></svg></span><div><p class="ft">専属マーケター<br>2名以上＋制作部隊</p><p class="fd">1商材ごとに専属チームを編成し、戦略から運用まで伴走します。</p></div></div>
+          <div class="fact"><span class="fic"><svg viewBox="0 0 24 24" fill="none"><circle cx="13.5" cy="12" r="7.5" fill="currentColor"/><path d="M13.5 7.5V12l3 1.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M1.5 8.5h4.5M.8 12h4.2M1.5 15.5h4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span><div><p class="ft">月間最大15,000本の<br>ABテスト体制</p><p class="fd">膨大な量のABテストを高速で回し、短期間で数値を改善します。</p></div></div>
+          <div class="fact"><span class="fic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M8.5 7l3.5 5 3.5-5M12 12v5.5M9.3 12.8h5.4M9.3 15.2h5.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><p class="ft">外部制作会社を挟まず<br>間接コストゼロ</p><p class="fd">制作・運用を自社で完結し、余計な中間費用を徹底カットしています。</p></div></div>
+        </div>
+      </div>
+      <div class="reg-note">
+        <img class="reg-photo" src="assets/reg-check.jpg" alt="クリエイティブチェックの様子">
+        <div>
+          <h4>薬機法・景表法も安心。専門部隊によるトリプル・レギュレーション監査</h4>
+          <p>「過激な表現でブランドが傷つくのでは…」という心配は無用です。専門部隊が<strong>薬機法・景表法などの広告関連法令、各SNSの最新ガイドライン、貴社のブランドトーン</strong>を徹底遵守。クリーンで成果の出るクリエイティブを担保します。</p>
+        </div>
+      </div>
+    </div>
 
-    <div class="sec-cta">
-      <p class="cb-lead">＼ 応募はカンタン3分・完全無料 ／</p>
-      <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
-    </div>
-  </div>
+    <div class="sec-cta">
+      <p class="cb-lead">＼ 応募はカンタン3分・完全無料 ／</p>
+      <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
+    </div>
+  </div>
 </section>
 
 <!-- 5. 応募条件・ステップ -->
 <section class="sec-gold">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">応募条件・開始までの流れ</h2>
-      <div class="gold-divider"><span></span><i></i><span></span></div>
-    </div>
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">応募条件・開始までの流れ</h2>
+      <div class="gold-divider"><span></span><i></i><span></span></div>
+    </div>
 
-    <div class="apply-cols">
-    <div class="joken-card">
-      <h3><span class="jk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg></span>応募条件</h3>
-      <p class="jk-lead">本キャンペーンは、弊社がリスクを負って売上最大化に取り組む共同プロジェクトです。そのため、以下の条件を満たす企業様に限定させていただきます。</p>
-      <div class="jk-list">
-        <div class="jk-item">
-          <img class="jk-photo" src="assets/cond-product.jpg" alt="売れている商品のイメージ">
-          <div class="jk-body"><span class="jk-no">条件 01</span><p>既に市場で売れている、または独自の強みを持つ商品・サービスをお持ちの会社様</p></div>
-        </div>
-        <div class="jk-item">
-          <img class="jk-photo" src="assets/cond-partner.jpg" alt="パートナーシップのイメージ">
-          <div class="jk-body"><span class="jk-no">条件 02</span><p>KITENと組み、本気で売上をスケールさせたい会社様</p></div>
-        </div>
-      </div>
-    </div>
+    <div class="apply-cols">
+    <div class="joken-card">
+      <h3><span class="jk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg></span>応募条件</h3>
+      <p class="jk-lead">本キャンペーンは、弊社がリスクを負って売上最大化に取り組む共同プロジェクトです。そのため、以下の条件を満たす企業様に限定させていただきます。</p>
+      <div class="jk-list">
+        <div class="jk-item">
+          <img class="jk-photo" src="assets/cond-product.jpg" alt="売れている商品のイメージ">
+          <div class="jk-body"><span class="jk-no">条件 01</span><p>既に市場で売れている、または独自の強みを持つ商品・サービスをお持ちの会社様</p></div>
+        </div>
+        <div class="jk-item">
+          <img class="jk-photo" src="assets/cond-partner.jpg" alt="パートナーシップのイメージ">
+          <div class="jk-body"><span class="jk-no">条件 02</span><p>KITENと組み、本気で売上をスケールさせたい会社様</p></div>
+        </div>
+      </div>
+    </div>
 
-    <div class="flow-card">
-      <h3 class="fl-title"><span></span>応募から開始までの流れ<span></span></h3>
-      <div class="flow3">
-        <div class="col">
-          <div class="col-head">
-            <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v9.5"/><path d="M15 3v3h3"/><path d="M6 3v18h7"/><path d="M9 9h6M9 12h4"/><circle cx="16" cy="16.5" r="3.2"/><path d="M18.4 18.9L21 21.5"/></svg></span>
-            <div><span class="fl-step">STEP 01</span><h4>エントリー<br>（書類審査）</h4></div>
-          </div>
-          <p>本ページのボタンからエントリーフォームへ。会社情報と商品・サービスURLをご入力いただければ、専門マーケターがスピーディに書類審査します。</p>
-        </div>
-        <div class="col">
-          <div class="col-head">
-            <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><circle cx="12" cy="9" r="2.1"/><path d="M8.5 14.5c.7-1.8 2-2.7 3.5-2.7s2.8.9 3.5 2.7"/><path d="M12 17v4"/><path d="M8.5 21h7"/></svg></span>
-            <div><span class="fl-step">STEP 02</span><h4>最終選考<br>（オンライン面談）</h4></div>
-          </div>
-          <p>書類審査を通過した企業様と、オンライン面談を実施します。現状のお悩みや目標獲得単価・件数を詳しくお伺いします。</p>
-        </div>
-        <div class="col">
-          <div class="col-head">
-            <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3.4 2.1 5 6 5 9.5l-2.6 3h-4.8L7 12c0-3.5 1.6-7.4 5-9.5z"/><circle cx="12" cy="9" r="1.8"/><path d="M7 12l-3 3.5 3.4.6"/><path d="M17 12l3 3.5-3.4.6"/><path d="M10.4 16.5L9.4 21l2.6-1.6 2.6 1.6-1-4.5"/></svg></span>
-            <div><span class="fl-step">STEP 03</span><h4>キャンペーン適用・<br>プロジェクト始動</h4></div>
-          </div>
-          <p>面談を通過した5社様と成果報酬条件をすり合わせ、NDA締結後、専属チームがキャスティング選定・プロモーション準備に入ります。</p>
-        </div>
-      </div>
-    </div>
-    </div>
+    <div class="flow-card">
+      <h3 class="fl-title"><span></span>応募から開始までの流れ<span></span></h3>
+      <div class="flow3">
+        <div class="col">
+          <div class="col-head">
+            <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v9.5"/><path d="M15 3v3h3"/><path d="M6 3v18h7"/><path d="M9 9h6M9 12h4"/><circle cx="16" cy="16.5" r="3.2"/><path d="M18.4 18.9L21 21.5"/></svg></span>
+            <div><span class="fl-step">STEP 01</span><h4>エントリー<br>（書類審査）</h4></div>
+          </div>
+          <p>本ページのボタンからエントリーフォームへ。会社情報と商品・サービスURLをご入力いただければ、専門マーケターがスピーディに書類審査します。</p>
+        </div>
+        <div class="col">
+          <div class="col-head">
+            <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><circle cx="12" cy="9" r="2.1"/><path d="M8.5 14.5c.7-1.8 2-2.7 3.5-2.7s2.8.9 3.5 2.7"/><path d="M12 17v4"/><path d="M8.5 21h7"/></svg></span>
+            <div><span class="fl-step">STEP 02</span><h4>最終選考<br>（オンライン面談）</h4></div>
+          </div>
+          <p>書類審査を通過した企業様と、オンライン面談を実施します。現状のお悩みや目標獲得単価・件数を詳しくお伺いします。</p>
+        </div>
+        <div class="col">
+          <div class="col-head">
+            <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3.4 2.1 5 6 5 9.5l-2.6 3h-4.8L7 12c0-3.5 1.6-7.4 5-9.5z"/><circle cx="12" cy="9" r="1.8"/><path d="M7 12l-3 3.5 3.4.6"/><path d="M17 12l3 3.5-3.4.6"/><path d="M10.4 16.5L9.4 21l2.6-1.6 2.6 1.6-1-4.5"/></svg></span>
+            <div><span class="fl-step">STEP 03</span><h4>キャンペーン適用・<br>プロジェクト始動</h4></div>
+          </div>
+          <p>面談を通過した5社様と成果報酬条件をすり合わせ、NDA締結後、専属チームがキャスティング選定・プロモーション準備に入ります。</p>
+        </div>
+      </div>
+    </div>
+    </div>
 
-    <p class="apply-note">※審査結果により、ご希望に添えない場合がございます。</p>
-  </div>
+    <p class="apply-note">※審査結果により、ご希望に添えない場合がございます。</p>
+  </div>
 </section>
 
 
 <!-- 7. 最終CTA・フォーム -->
 <section class="sec-green" id="entry">
-  <div class="container">
-    <div class="final-grid">
-      <div class="final-copy">
-        <h2><span class="l1">タレントの<em class="kw">爆発的な認知パワー</em>と<em class="kw">コスト負担ゼロ</em>の成果報酬広告で、</span><br><span class="l2">貴社の商品を一気に<em class="kw2">市場の主役</em>に押し上げませんか？</span></h2>
-        <p>この夏、KITENが貴社のグロースパートナーになります。チャンスはわずか5社、7月31日18時まで。</p>
-        <div class="final-panel">
-          <div class="final-laurel">
-            <div class="gold-limit"><span class="gl-cap">先着順・審査制</span><span class="gl-main">限定<em>5</em>社</span></div>
-            <div class="deadline">
-              <span class="d">7/31(金) 18:00 締切</span>
-              <span class="s">締切まで、あと</span>
-              <div class="countdown" id="countdown">
-                <div class="unit"><div class="n" id="cd-d">--</div><div class="u">日</div></div>
-                <div class="unit"><div class="n" id="cd-h">--</div><div class="u">時間</div></div>
-                <div class="unit"><div class="n" id="cd-m">--</div><div class="u">分</div></div>
-                <div class="unit"><div class="n" id="cd-s">--</div><div class="u">秒</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="entry-cta">
-        <div class="cta-guide" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l7 7 7-7"/><path d="M5 12.5l7 7 7-7"/></svg></div>
-        <a class="cta-btn" href="https://campaign07.kit-en.co.jp/form/" target="_blank" rel="noopener"><span class="lb">無料で<span class="kw">エントリー</span>する</span><small>（簡単3分）</small><span class="arrow">▶</span></a>
-        <p class="entry-note">※エントリーフォームが開きます。ご入力いただいた情報は、プライバシーポリシーに基づき厳重に管理いたします。</p>
-      </div>
-    </div>
-  </div>
+  <div class="container">
+    <div class="final-grid">
+      <div class="final-copy">
+        <h2><span class="l1">タレントの<em class="kw">爆発的な認知パワー</em>と<em class="kw">コスト負担ゼロ</em>の成果報酬広告で、</span><br><span class="l2">貴社の商品を一気に<em class="kw2">市場の主役</em>に押し上げませんか？</span></h2>
+        <p>この夏、KITENが貴社のグロースパートナーになります。チャンスはわずか5社、7月31日18時まで。</p>
+        <div class="final-panel">
+          <div class="final-laurel">
+            <div class="gold-limit"><span class="gl-cap">先着順・審査制</span><span class="gl-main">限定<em>5</em>社</span></div>
+            <div class="deadline">
+              <span class="d">7/31(金) 18:00 締切</span>
+              <span class="s">締切まで、あと</span>
+              <div class="countdown" id="countdown">
+                <div class="unit"><div class="n" id="cd-d">--</div><div class="u">日</div></div>
+                <div class="unit"><div class="n" id="cd-h">--</div><div class="u">時間</div></div>
+                <div class="unit"><div class="n" id="cd-m">--</div><div class="u">分</div></div>
+                <div class="unit"><div class="n" id="cd-s">--</div><div class="u">秒</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="entry-cta">
+        <div class="cta-guide" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l7 7 7-7"/><path d="M5 12.5l7 7 7-7"/></svg></div>
+        <a class="cta-btn" href="https://campaign07.kit-en.co.jp/form/" target="_blank" rel="noopener"><span class="lb">無料で<span class="kw">エントリー</span>する</span><small>（簡単3分）</small><span class="arrow">▶</span></a>
+        <p class="entry-note">※エントリーフォームが開きます。ご入力いただいた情報は、プライバシーポリシーに基づき厳重に管理いたします。</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <div class="footer-inner">
-    <img src="assets/logo-kiten-white.png" alt="KITEN">
-    <small>&copy; KITEN Inc. All Rights Reserved.</small>
-  </div>
+  <div class="footer-inner">
+    <img src="assets/logo-kiten-white.png" alt="KITEN">
+    <small>&copy; KITEN Inc. All Rights Reserved.</small>
+  </div>
 </footer>
 
 <script>
 // カウントダウン（締切: 2026-07-31 18:00 JST）
 (function () {
-  var deadline = new Date('2026-07-31T18:00:00+09:00').getTime();
-  var ids = ['cd-d', 'cd-h', 'cd-m', 'cd-s'];
-  function pad(n) { return String(n).padStart(2, '0'); }
-  function tick() {
-    var diff = deadline - Date.now();
-    if (diff <= 0) {
-      document.getElementById('countdown').innerHTML =
-        '<p style="font-weight:900;color:var(--gold-light);">本キャンペーンの受付は終了しました</p>';
-      return;
-    }
-    var d = Math.floor(diff / 86400000);
-    var h = Math.floor(diff % 86400000 / 3600000);
-    var m = Math.floor(diff % 3600000 / 60000);
-    var s = Math.floor(diff % 60000 / 1000);
-    var v = [d, pad(h), pad(m), pad(s)];
-    ids.forEach(function (id, i) { document.getElementById(id).textContent = v[i]; });
-    setTimeout(tick, 1000);
-  }
-  tick();
+  var deadline = new Date('2026-07-31T18:00:00+09:00').getTime();
+  var ids = ['cd-d', 'cd-h', 'cd-m', 'cd-s'];
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function tick() {
+    var diff = deadline - Date.now();
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML =
+        '<p style="font-weight:900;color:var(--gold-light);">本キャンペーンの受付は終了しました</p>';
+      return;
+    }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor(diff % 86400000 / 3600000);
+    var m = Math.floor(diff % 3600000 / 60000);
+    var s = Math.floor(diff % 60000 / 1000);
+    var v = [d, pad(h), pad(m), pad(s)];
+    ids.forEach(function (id, i) { document.getElementById(id).textContent = v[i]; });
+    setTimeout(tick, 1000);
+  }
+  tick();
 })();
 
 // SP: 比較表のスワイプヒント（初回スクロールで消える）
 (function () {
-  var sc = document.querySelector('.cmpx-scroll');
-  var hint = document.querySelector('.scroll-hint');
-  if (!sc || !hint) return;
-  var hide = function () { hint.classList.add('is-hidden'); sc.removeEventListener('scroll', hide); };
-  sc.addEventListener('scroll', hide, { passive: true });
+  var sc = document.querySelector('.cmpx-scroll');
+  var hint = document.querySelector('.scroll-hint');
+  if (!sc || !hint) return;
+  var hide = function () { hint.classList.add('is-hidden'); sc.removeEventListener('scroll', hide); };
+  sc.addEventListener('scroll', hide, { passive: true });
 })();
 </script>
 
