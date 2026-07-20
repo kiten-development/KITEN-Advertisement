@@ -11,19 +11,6 @@
 <style>
 :root {
   --green: #0B5E38;
-  --green-dark: #084A2C;<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>エントリーフォーム｜KITEN 限定5社キャンペーン</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="icon" href="../assets/company_logo.png" type="image/x-icon">
-<style>
-:root {
-  --green: #0B5E38;
   --green-dark: #084A2C;
   --green-darker: #063B23;
   --orange: #F5820B;
@@ -45,6 +32,16 @@ body {
 a { text-decoration: none; }
 img { max-width: 100%; display: block; }
 .wrap { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, .75);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.back-link:hover { color: var(--gold-light); }
 .page-logo { width: 130px; margin: 0 auto 30px; }
 .page-head { text-align: center; margin-bottom: 40px; }
 .page-head .eyebrow {
@@ -142,7 +139,15 @@ img { max-width: 100%; display: block; }
 }
 .ef-success .es-ic svg { width: 30px; height: 30px; }
 .ef-success h3 { font-size: 20px; font-weight: 900; color: var(--white); margin-bottom: 10px; }
-.ef-success p { font-size: 14.5px; color: rgba(255, 255, 255, .8); margin-bottom: 0; }
+.ef-success p { font-size: 14.5px; color: rgba(255, 255, 255, .8); margin-bottom: 24px; }
+.ef-success a {
+  display: inline-block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--gold-light);
+  border-bottom: 1px solid rgba(232, 207, 142, .5);
+  padding-bottom: 2px;
+}
 @media (max-width: 600px) {
   .wrap { padding: 34px 16px 60px; }
   .entry-form { padding: 24px 20px; border-radius: 14px; }
@@ -154,6 +159,7 @@ img { max-width: 100%; display: block; }
 </head>
 <body>
 <div class="wrap">
+  <a class="back-link" href="../">&larr; メインページに戻る</a>
   <img class="page-logo" src="../assets/logo-kiten-white.png" alt="KITEN">
 
   <div class="page-head" id="ef-head">
@@ -209,10 +215,23 @@ img { max-width: 100%; display: block; }
     <span class="es-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
     <h3>エントリーを受け付けました</h3>
     <p>ご入力ありがとうございます。内容を確認のうえ、担当者よりご連絡いたします。</p>
+    <a class="back-link" href="../">&larr; メインページに戻る</a>
   </div>
 </div>
 
 <script>
+
+// URL末尾の index.html を非表示にする
+if (window.location.pathname.endsWith('/index.html')) {
+  const cleanPath = window.location.pathname.replace(/index\.html$/, '');
+
+  window.history.replaceState(
+    null,
+    '',
+    cleanPath + window.location.search + window.location.hash
+  );
+}
+
 // エントリーフォーム送信（Google Apps Script Web App経由でスプレッドシートに追記）
 (function () {
   var form = document.getElementById('entry-form');
@@ -245,258 +264,6 @@ img { max-width: 100%; display: block; }
       body: data
     }).then(function () {
       // no-corsのためレスポンス内容は読めないが、到達できれば成功とみなす
-      form.style.display = 'none';
-      if (head) head.style.display = 'none';
-      success.style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }).catch(function () {
-      errorEl.style.display = 'block';
-      btn.disabled = false;
-      btnLb.innerHTML = originalLb;
-    });
-  });
-})();
-</script>
-</body>
-</html>
-
-  --green-darker: #063B23;
-  --orange: #F5820B;
-  --orange-dark: #E06F00;
-  --gold: #C9A34A;
-  --gold-light: #E8CF8E;
-  --text: #1E2A24;
-  --white: #fff;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  background: linear-gradient(180deg, var(--green) 0%, var(--green-dark) 100%);
-  color: var(--white);
-  line-height: 1.8;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-}
-a { text-decoration: none; }
-img { max-width: 100%; display: block; }
-.wrap { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: rgba(255, 255, 255, .75);
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-.back-link:hover { color: var(--gold-light); }
-.page-logo { width: 130px; margin: 0 auto 30px; }
-.page-head { text-align: center; margin-bottom: 40px; }
-.page-head .eyebrow {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .2em;
-  color: var(--gold-light);
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.page-head h1 { font-size: 25px; font-weight: 900; margin-bottom: 12px; }
-.page-head p { font-size: 14.5px; color: rgba(255, 255, 255, .8); max-width: 46em; margin: 0 auto; }
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: linear-gradient(180deg, var(--orange) 0%, var(--orange-dark) 100%);
-  color: var(--white);
-  font-size: 19px;
-  font-weight: 900;
-  padding: 20px 40px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 8px 24px rgba(224, 111, 0, .35);
-  transition: transform .15s, box-shadow .15s;
-  width: 100%;
-}
-.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(224, 111, 0, .45); }
-.cta-btn:disabled { opacity: .65; cursor: not-allowed; transform: none; }
-.cta-btn .lb { white-space: nowrap; font-weight: 700; }
-.cta-btn .lb .kw { font-size: 1.2em; font-weight: 900; }
-.cta-btn small { font-size: 12.5px; font-weight: 700; white-space: nowrap; }
-.entry-form {
-  background: rgba(255, 255, 255, .06);
-  border: 1.5px solid rgba(232, 207, 142, .35);
-  border-radius: 18px;
-  padding: 34px 38px;
-}
-.ef-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
-.ef-field { margin-bottom: 18px; }
-.ef-field label {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--gold-light);
-  margin-bottom: 6px;
-  letter-spacing: .03em;
-}
-.ef-field label .req { color: var(--orange); font-size: 11px; margin-left: 4px; font-weight: 700; }
-.ef-field label .opt { color: rgba(255, 255, 255, .55); font-size: 11px; margin-left: 4px; font-weight: 700; }
-.ef-field input, .ef-field textarea {
-  width: 100%;
-  background: rgba(255, 255, 255, .96);
-  border: 1.5px solid transparent;
-  border-radius: 10px;
-  padding: 13px 16px;
-  font-family: inherit;
-  font-size: 15px;
-  color: var(--text);
-  transition: border-color .15s, box-shadow .15s;
-}
-.ef-field input:focus, .ef-field textarea:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(201, 163, 74, .3);
-}
-.ef-field textarea { resize: vertical; min-height: 92px; line-height: 1.6; }
-.ef-honey { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
-.ef-submit { text-align: center; margin-top: 4px; }
-.ef-error { display: none; color: #FFD9D9; font-size: 13px; font-weight: 700; text-align: center; margin-top: 12px; }
-.entry-note { font-size: 12px; color: rgba(255, 255, 255, .65); margin-top: 16px; text-align: center; }
-.ef-success {
-  display: none;
-  text-align: center;
-  background: rgba(255, 255, 255, .06);
-  border: 1.5px solid rgba(232, 207, 142, .5);
-  border-radius: 18px;
-  padding: 50px 38px;
-}
-.ef-success .es-ic {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: var(--gold-light);
-  color: var(--green-darker);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 18px;
-}
-.ef-success .es-ic svg { width: 30px; height: 30px; }
-.ef-success h3 { font-size: 20px; font-weight: 900; color: var(--white); margin-bottom: 10px; }
-.ef-success p { font-size: 14.5px; color: rgba(255, 255, 255, .8); margin-bottom: 24px; }
-.ef-success a {
-  display: inline-block;
-  font-size: 13.5px;
-  font-weight: 700;
-  color: var(--gold-light);
-  border-bottom: 1px solid rgba(232, 207, 142, .5);
-  padding-bottom: 2px;
-}
-@media (max-width: 600px) {
-  .wrap { padding: 34px 16px 60px; }
-  .entry-form { padding: 24px 20px; border-radius: 14px; }
-  .ef-row { grid-template-columns: 1fr; gap: 0; }
-  .ef-success { padding: 34px 22px; border-radius: 14px; }
-  .page-head h1 { font-size: 21px; }
-}
-</style>
-</head>
-<body>
-<div class="wrap">
-  <a class="back-link" href="../index.html">&larr; メインページに戻る</a>
-  <img class="page-logo" src="../assets/logo-kiten-white.png" alt="KITEN">
-
-  <div class="page-head" id="ef-head">
-    <div class="eyebrow">Entry Form</div>
-    <h1>芸能人キャスティングFee 0円キャンペーン<br>エントリーフォーム</h1>
-    <p>会社情報と商品・サービスURLをご入力ください。専門マーケターがスピーディに書類審査のうえ、担当者よりご連絡いたします。</p>
-  </div>
-
-  <form class="entry-form" id="entry-form" autocomplete="off" data-endpoint="https://script.google.com/macros/s/AKfycbwfarVkFAZedLFeBrgKibS5k7QD_iVdyMV2WD8IVkOCq6ibF3lUlPTytC4UgITINtp2DA/exec">
-    <input type="text" name="website" class="ef-honey" tabindex="-1" autocomplete="off">
-    <div class="ef-row">
-      <div class="ef-field">
-        <label for="ef-company">会社名<span class="req">必須</span></label>
-        <input id="ef-company" type="text" name="company" required placeholder="株式会社〇〇">
-      </div>
-      <div class="ef-field">
-        <label for="ef-name">ご担当者名<span class="req">必須</span></label>
-        <input id="ef-name" type="text" name="name" required placeholder="山田 太郎">
-      </div>
-    </div>
-    <div class="ef-row">
-      <div class="ef-field">
-        <label for="ef-position">役職<span class="opt">任意</span></label>
-        <input id="ef-position" type="text" name="position" placeholder="マーケティング部長">
-      </div>
-      <div class="ef-field">
-        <label for="ef-email">メールアドレス<span class="req">必須</span></label>
-        <input id="ef-email" type="email" name="email" required placeholder="example@company.co.jp">
-      </div>
-    </div>
-    <div class="ef-row">
-      <div class="ef-field">
-        <label for="ef-tel">電話番号<span class="req">必須</span><span class="hint">（ハイフンなし）</span></label>
-        <input id="ef-tel" type="tel" name="tel" required placeholder="09012345678" pattern="[0-9]{10,11}" inputmode="numeric" maxlength="11" title="ハイフンなしの数字のみで入力してください（例: 09012345678）">
-      </div>
-      <div class="ef-field">
-        <label for="ef-url">商品・サービスURL<span class="req">必須</span></label>
-        <input id="ef-url" type="url" name="product_url" required placeholder="https://example.com">
-      </div>
-    </div>
-    <div class="ef-field">
-      <label for="ef-message">現状のお悩み・ご質問など<span class="opt">任意</span></label>
-      <textarea id="ef-message" name="message" placeholder="現在の広告課題や目標などがあればご記入ください"></textarea>
-    </div>
-    <div class="ef-submit">
-      <button type="submit" class="cta-btn" id="ef-submit-btn"><span class="lb">無料で<span class="kw">エントリー</span>する</span></button>
-    </div>
-    <p class="ef-error" id="ef-error">送信に失敗しました。時間をおいて再度お試しください。</p>
-    <p class="entry-note">※ご入力いただいた情報は、<a href="https://kit-en.co.jp/privacy-policy/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に基づき厳重に管理いたします。</p>
-  </form>
-
-  <div class="ef-success" id="ef-success">
-    <span class="es-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-    <h3>エントリーを受け付けました</h3>
-    <p>ご入力ありがとうございます。内容を確認のうえ、担当者よりご連絡いたします。</p>
-    <a href="../index.html">&larr; メインページに戻る</a>
-  </div>
-</div>
-
-<script>
-// エントリーフォーム送信（Google Apps Script Web App経由でスプレッドシートに追記）
-(function () {
-  var form = document.getElementById('entry-form');
-  var head = document.getElementById('ef-head');
-  var success = document.getElementById('ef-success');
-  var errorEl = document.getElementById('ef-error');
-  var btn = document.getElementById('ef-submit-btn');
-  if (!form) return;
-
-  // デプロイURLはform要素のdata-endpoint属性から取得（改行や空白が混ざっても壊れないよう除去）
-  var GAS_WEB_APP_URL = (form.getAttribute('data-endpoint') || '').replace(/\s+/g, '');
-
-  form.addEventListener('submit', function (ev) {
-    ev.preventDefault();
-    errorEl.style.display = 'none';
-
-    // ハニーポット（ボットが埋めていたら何もせず終了）
-    if (form.website.value) return;
-
-    var btnLb = btn.querySelector('.lb');
-    var originalLb = btnLb.innerHTML;
-    btn.disabled = true;
-    btnLb.textContent = '送信中…';
-
-    var data = new FormData(form);
-
-    fetch(GAS_WEB_APP_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: data
-    }).then(function () {
       form.style.display = 'none';
       if (head) head.style.display = 'none';
       success.style.display = 'block';
