@@ -442,7 +442,12 @@ section { padding: 88px 0; }
   box-shadow: var(--shadow);
 }
 
-.case-photo { height: 215px; background-size: 200% auto; background-repeat: no-repeat; }
+.case-photo {
+  width: 100%;
+  height: 215px;
+  background-size: 200% auto;
+  background-repeat: no-repeat;
+}
 .case-photo.p1 { background-image: url('assets/talent-2.jpg'); background-position: 100% 5%; }
 .case-photo.p2 { background-image: url('assets/talent-2.jpg'); background-position: 0% 12%; }
 .case-photo.p3 { background-image: url('assets/talent-2.jpg'); background-position: 100% 76%; }
@@ -781,6 +786,14 @@ footer { background: var(--green-darker); padding: 28px 0; }
 
   .section-title { font-size: 24px; }
   .problem-grid, .offer-grid, .case-grid { grid-template-columns: 1fr; }
+
+  /* Case cards: keep the background crop proportional on tablet/mobile. */
+  .case-photo {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-height: 200px;
+    max-height: 360px;
+  }
   .network-card { padding: 26px 18px 22px; border-radius: 16px; }
   .nc-main { grid-template-columns: 1fr; gap: 4px; margin-bottom: 30px; }
   .nc-title { font-size: 20px; margin-bottom: 16px; }
@@ -1209,8 +1222,9 @@ footer { background: var(--green-darker); padding: 28px 0; }
       </div>
       <div class="entry-cta">
         <div class="cta-guide" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l7 7 7-7"/><path d="M5 12.5l7 7 7-7"/></svg></div>
-        <a class="cta-btn" href="form/index.html"><span class="lb">無料で<span class="kw">エントリー</span>する</span><small>（簡単3分・入力フォームへ）</small><span class="arrow">▶</span></a>
-        <p class="entry-note">※エントリーフォームのページへ移動します。ご入力いただいた情報は、プライバシーポリシーに基づき厳重に管理いたします。</p>
+        <!-- TODO: GoogleフォームのURLに差し替え -->
+        <a class="cta-btn" href="https://docs.google.com/forms/d/e/XXXXXXXXXXXXXXXXXXXXXXXX/viewform" target="_blank" rel="noopener"><span class="lb">無料で<span class="kw">エントリー</span>する</span><small>（簡単3分・Googleフォーム）</small><span class="arrow">▶</span></a>
+        <p class="entry-note">※エントリーフォーム（Googleフォーム）が開きます。ご入力いただいた情報は、プライバシーポリシーに基づき厳重に管理いたします。</p>
       </div>
     </div>
   </div>
