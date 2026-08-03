@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="icon" href="assets/company_logo.png" type=“image/x-icon”>
+<link rel="icon" href="assets/company_logo.png" type="image/x-icon">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -58,27 +58,46 @@ a { text-decoration: none; }
 .fv-image img { width: 100%; display: block; }
 .fv-logo { position: absolute; top: 1.6vw; left: 2.2vw; width: clamp(110px, 10.5vw, 160px); height: auto; z-index: 6; pointer-events: none; }
 .fv-cta { position: absolute; left: 0; right: 0; bottom: 0; transform: translateY(50%); text-align: center; z-index: 5; }
-.fv-cta .cta-btn { font-size: 20px; padding: 22px 64px; }
+.fv-cta .cta-btn { font-size: 20px; padding: 16px 64px 18px; }
 .fv + section { padding-top: 68px; }
 
+/* ===== 共通CTAボタン ===== */
 .cta-btn {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
   background: linear-gradient(180deg, var(--orange) 0%, var(--orange-dark) 100%);
   color: var(--white);
   font-size: 20px;
   font-weight: 900;
-  padding: 20px 56px;
+  padding: 16px 56px 18px;
   border-radius: 999px;
   border: none;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(224, 111, 0, .35);
   transition: transform .15s, box-shadow .15s;
+  line-height: 1.3;
 }
 
 .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(224, 111, 0, .45); }
+
+/* 上部追加マイクロコピー */
+.cta-btn .cta-sub-lead {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFF133;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.cta-btn .cta-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
 .cta-btn .arrow { font-size: 16px; }
 .cta-btn small { font-size: 13px; font-weight: 700; white-space: nowrap; }
 .cta-btn .lb { white-space: nowrap; font-weight: 700; }
@@ -90,7 +109,7 @@ a { text-decoration: none; }
 .sec-cta.mid { margin: 0 0 72px; }
 .sec-cta .cb-lead { font-size: 21px; font-weight: 900; letter-spacing: .05em; color: var(--green-dark); margin-bottom: 16px; }
 .sec-green .sec-cta .cb-lead { color: var(--gold-light); }
-.sec-cta .cta-btn { font-size: 18px; padding: 19px 56px; }
+.sec-cta .cta-btn { font-size: 18px; padding: 15px 56px 17px; }
 
 /* ===== 共通セクション ===== */
 section { padding: 88px 0; }
@@ -748,7 +767,7 @@ section { padding: 88px 0; }
 .countdown .u { font-size: 10.5px; color: rgba(255, 255, 255, .75); }
 
 .entry-cta { text-align: center; }
-.entry-cta .cta-btn { font-size: 21px; padding: 24px 72px; flex-wrap: wrap; }
+.entry-cta .cta-btn { font-size: 21px; padding: 18px 72px 20px; }
 .entry-cta .cta-btn .lb, .entry-cta .cta-btn small { white-space: nowrap; }
 .entry-note { font-size: 12px; color: rgba(255, 255, 255, .7); margin-top: 14px; }
 
@@ -773,22 +792,26 @@ footer { background: var(--green-darker); padding: 28px 0; }
   br.pc { display: none; }
   section { padding: 64px 0; }
   .container { padding: 0 20px; }
-  .cta-btn { width: 100%; font-size: 15px; padding: 18px 20px; flex-wrap: wrap; gap: 4px 10px; }
-  .fv-logo { top: 3.6vw; left: 4.6vw; width: clamp(80px, 28vw, 200px); }
-  .fv-cta { left: 16px; right: 16px; bottom: 0; transform: translateY(50%); }
-  .fv-cta .cta-btn {
+  
+  .cta-btn {
     width: 100%;
     font-size: 15.5px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 3px;
-    padding: 14px 34px;
-    line-height: 1.38;
+    padding: 12px 20px 14px;
     position: relative;
   }
-  .fv-cta .cta-btn .lb { white-space: nowrap; text-align: center; }
-  .fv-cta .cta-btn small { font-size: 11.5px; }
-  .fv-cta .cta-btn .arrow { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 14px; }
+  .cta-btn .cta-sub-lead { font-size: 11.5px; }
+  .cta-btn .cta-main {
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+  }
+  .cta-btn .lb { white-space: nowrap; text-align: center; }
+  .cta-btn small { font-size: 11.5px; }
+  .cta-btn .arrow { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 14px; }
+
+  .fv-logo { top: 3.6vw; left: 4.6vw; width: clamp(80px, 28vw, 200px); }
+  .fv-cta { left: 16px; right: 16px; bottom: 0; transform: translateY(50%); }
+  .fv-cta .cta-btn { padding: 12px 34px 14px; }
   .fv + section { padding-top: 56px; }
 
   .section-title { font-size: 24px; }
@@ -867,25 +890,13 @@ footer { background: var(--green-darker); padding: 28px 0; }
   .fl-icon svg { width: 28px; height: 28px; }
   .sec-cta { margin-top: 48px; }
   .sec-cta .cb-lead { font-size: 15px; }
+  .sec-cta .cta-btn { font-size: 15.5px; padding: 12px 34px 14px; }
   .offer-card h3 { font-size: 18px; }
   .offer-card h3 .em { font-size: 22px; }
   .section-lead.lead-strong { font-size: 16.5px; }
   .final-panel { padding: 22px 18px 26px; margin-top: 26px; }
   .cta-guide { margin: -10px 0 10px; }
   .cta-guide svg { width: 26px; height: 26px; }
-  .sec-cta .cta-btn {
-    width: 100%;
-    font-size: 15.5px;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 3px;
-    padding: 14px 34px;
-    line-height: 1.38;
-    position: relative;
-  }
-  .sec-cta .cta-btn .lb { white-space: normal; text-align: center; }
-  .sec-cta .cta-btn small { font-size: 11.5px; }
-  .sec-cta .cta-btn .arrow { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 14px; }
   .reg-note { flex-direction: column; align-items: stretch; }
   .reg-photo { width: 100%; height: 110px; }
   .final-laurel { flex-direction: column; gap: 16px; }
@@ -895,35 +906,9 @@ footer { background: var(--green-darker); padding: 28px 0; }
   .final-copy h2 .l2 { font-size: 17px; }
   .final-copy h2 .kw { font-size: 21px; }
   .final-copy h2 .kw2 { font-size: 25px; }
-  .entry-cta .cta-btn { font-size: 17px; padding: 17px 16px; gap: 2px 8px; }
-  .entry-cta .cta-btn small { font-size: 12px; }
+  .entry-cta .cta-btn { font-size: 16px; padding: 12px 16px 14px; }
   .countdown .unit { min-width: 0; flex: 1; }
 }
-
-/* CTAボタン内の構造調整 */
-.cta-btn {
-  /* 既存のプロパティに以下を追加/確認 */
-  flex-direction: column; /* 縦並びに変更 */
-  padding: 16px 56px 18px; /* 上下のパディングを微調整 */
-  line-height: 1.3;
-}
-
-/* 上部に追加するマイクロコピー（キャスティング費用が0円） */
-.cta-btn .cta-sub-lead {
-  font-size: 13px;
-  font-weight: 700;
-  color: #FFF133; /* 視認性の高い黄色（または白 #fff） */
-  letter-spacing: 0.05em;
-  margin-bottom: 2px;
-}
-
-/* メインテキストの折り返しやサイズ調整 */
-.cta-btn .cta-main {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-  
 </style>
 </head>
 <body>
@@ -933,14 +918,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- 1. FV -->
-<div class="fv"><a class="fv-image"><picture>
-  <source media="(max-width: 960px)" srcset="assets/fv-top-sp_Ver2.png">
-  <img src="assets/fv-top-pc_Ver2.png" alt="競合と差をつけろ！芸能人キャスティングで、売れる広告へ。限定5社 キャスティングFee0円 〜8/15 18:00まで">
-</picture></a>
+<div class="fv">
+  <a class="fv-image">
+    <picture>
+      <source media="(max-width: 960px)" srcset="assets/fv-top-sp_Ver2.png">
+      <img src="assets/fv-top-pc_Ver2.png" alt="競合と差をつけろ！芸能人キャスティングで、売れる広告へ。限定5社 キャスティングFee0円 〜8/15 18:00まで">
+    </picture>
+  </a>
   <img class="fv-logo" src="assets/logo-kiten.png" alt="KITEN">
 
   <div class="fv-cta">
-    <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
+    <a class="cta-btn" href="#entry">
+      <span class="cta-sub-lead">\ キャスティング費用が0円 /</span>
+      <span class="cta-main">
+        <span class="lb">今すぐ<span class="kw">エントリー</span>する</span>
+        <small>（簡単3分・完全無料）</small>
+        <span class="arrow">▶</span>
+      </span>
+    </a>
   </div>
 </div>
 
@@ -1008,42 +1003,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     
     <div class="cmpx-wrap">
-    <div class="cmpx-title">
-      <h2><span class="accent">KITEN</span>がその<em>リスク</em>と<em>費用</em>を<br class="sp">すべて引き受けます</h2>
-    </div>
-    <div class="cmpx-divider"><span></span><i>✦</i><span></span></div>
+      <div class="cmpx-title">
+        <h2><span class="accent">KITEN</span>がその<em>リスク</em>と<em>費用</em>を<br class="sp">すべて引き受けます</h2>
+      </div>
+      <div class="cmpx-divider"><span></span><i>✦</i><span></span></div>
 
-    <div class="cmpx-outer"><div class="cmpx-scroll"><div class="cmpx">
-      <div class="cmpx-col labels">
-        <div class="cmpx-head"></div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-4-3-6.5-7.5-6.5C4.5 11 7.5 13 12 13z"/><path d="M12 13c0-4 3-6.5 7.5-6.5C19.5 11 16.5 13 12 13z"/></svg></span>初期費用</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>タレント費用</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span>運用手数料</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>成果条件</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>リスク負担</div>
+      <div class="cmpx-outer">
+        <div class="cmpx-scroll">
+          <div class="cmpx">
+            <div class="cmpx-col labels">
+              <div class="cmpx-head"></div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-8"/><path d="M12 13c0-4-3-6.5-7.5-6.5C4.5 11 7.5 13 12 13z"/><path d="M12 13c0-4 3-6.5 7.5-6.5C19.5 11 16.5 13 12 13z"/></svg></span>初期費用</div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>タレント費用</div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span>運用手数料</div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>成果条件</div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>リスク負担</div>
+            </div>
+            <div class="cmpx-col kiten">
+              <div class="cmpx-head">KITENの成果報酬モデル</div>
+              <div class="cell"><span class="yen">¥0</span><p>初期費用<em class="big">0</em>でスタート</p></div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><p>キャスティングFee <em class="big">0</em><em>円</em></p></div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span><p>成果発生時<em>のみ</em>請求</p></div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><p>成果が<em>出た分だけ</em>請求</p></div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><p>リスクは<em>KITEN側が負担</em></p></div>
+              <div class="cmpx-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="13" height="10" rx="2"/><path d="M15 10.5l7-3.5v10l-7-3.5z"/></svg><span>クリエイティブ制作・撮影も対応</span></div>
+            </div>
+            <div class="cmpx-col normal">
+              <div class="cmpx-head">通常の予算型（Feeモデル）</div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>初期費用が高い</div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>タレント費用が先出し</div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span>運用手数料が固定で発生</div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6 6 4-4 8 8"/><path d="M14 17h7v-7"/></svg></span>成果が出なくても費用がかかる</div>
+              <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4L2.5 20.5h19L12 4z"/><path d="M12 10v4"/><path d="M12 17.5h.01"/></svg></span>企業側のリスクが大きい</div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 11.5V4.8a1.4 1.4 0 0 1 2.8 0v6.2"/><path d="M12.8 11v-1.2a1.4 1.4 0 0 1 2.8 0V12"/><path d="M15.6 12.2a1.4 1.4 0 0 1 2.8.3v2.8c0 3.6-2.4 5.9-6 5.9h-1.3c-1.8 0-3.5-.9-4.5-2.4l-2.3-3.4c-.6-.9-.2-2.1.9-2.4.6-.2 1.3 0 1.7.5l1.1 1.3"/><path d="M3 4.5h3.5M4 2l1.2 1.2L4 4.4"/></svg><span>横にスクロールできます</span></div>
       </div>
-      <div class="cmpx-col kiten">
-        <div class="cmpx-head">KITENの成果報酬モデル</div>
-        <div class="cell"><span class="yen">¥0</span><p>初期費用<em class="big">0</em>でスタート</p></div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><p>キャスティングFee <em class="big">0</em><em>円</em></p></div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span><p>成果発生時<em>のみ</em>請求</p></div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><p>成果が<em>出た分だけ</em>請求</p></div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><p>リスクは<em>KITEN側が負担</em></p></div>
-        <div class="cmpx-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="13" height="10" rx="2"/><path d="M15 10.5l7-3.5v10l-7-3.5z"/></svg><span>クリエイティブ制作・撮影も対応</span></div>
-      </div>
-      <div class="cmpx-col normal">
-        <div class="cmpx-head">通常の予算型（Feeモデル）</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span>初期費用が高い</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>タレント費用が先出し</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg></span>運用手数料が固定で発生</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6 6 4-4 8 8"/><path d="M14 17h7v-7"/></svg></span>成果が出なくても費用がかかる</div>
-        <div class="cell"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4L2.5 20.5h19L12 4z"/><path d="M12 10v4"/><path d="M12 17.5h.01"/></svg></span>企業側のリスクが大きい</div>
-      </div>
-    </div>
-</div>
-      <div class="scroll-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 11.5V4.8a1.4 1.4 0 0 1 2.8 0v6.2"/><path d="M12.8 11v-1.2a1.4 1.4 0 0 1 2.8 0V12"/><path d="M15.6 12.2a1.4 1.4 0 0 1 2.8.3v2.8c0 3.6-2.4 5.9-6 5.9h-1.3c-1.8 0-3.5-.9-4.5-2.4l-2.3-3.4c-.6-.9-.2-2.1.9-2.4.6-.2 1.3 0 1.7.5l1.1 1.3"/><path d="M3 4.5h3.5M4 2l1.2 1.2L4 4.4"/></svg><span>横にスクロールできます</span></div>
-    </div>
-
     </div>
 
     <div class="sec-cta">
@@ -1051,10 +1047,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="cta-btn" href="#entry">
         <span class="cta-sub-lead">\ キャスティング費用が0円 /</span>
         <span class="cta-main">
-        <span class="lb">今すぐ<span class="kw">エントリー</span>する</span>
-        <small>（簡単3分・完全無料）</small>
-        <span class="arrow">▶</span>
-      </span>
+          <span class="lb">今すぐ<span class="kw">エントリー</span>する</span>
+          <small>（簡単3分・完全無料）</small>
+          <span class="arrow">▶</span>
+        </span>
       </a>
     </div>
   </div>
@@ -1142,9 +1138,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="sec-cta mid">
       <p class="cb-lead">＼ 限定5社・8月15日(土)18:00締切 ／</p>
-      <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
+      <a class="cta-btn" href="#entry">
+        <span class="cta-sub-lead">\ キャスティング費用が0円 /</span>
+        <span class="cta-main">
+          <span class="lb">今すぐ<span class="kw">エントリー</span>する</span>
+          <small>（簡単3分・完全無料）</small>
+          <span class="arrow">▶</span>
+        </span>
+      </a>
     </div>
-
 
     <div class="system-grid">
       <div class="capa">
@@ -1178,7 +1180,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="sec-cta">
       <p class="cb-lead">＼ 応募はカンタン3分・完全無料 ／</p>
-      <a class="cta-btn" href="#entry"><span class="lb">今すぐ<span class="kw">エントリー</span>する</span><small>（簡単3分・完全無料）</small><span class="arrow">▶</span></a>
+      <a class="cta-btn" href="#entry">
+        <span class="cta-sub-lead">\ キャスティング費用が0円 /</span>
+        <span class="cta-main">
+          <span class="lb">今すぐ<span class="kw">エントリー</span>する</span>
+          <small>（簡単3分・完全無料）</small>
+          <span class="arrow">▶</span>
+        </span>
+      </a>
     </div>
   </div>
 </section>
@@ -1192,53 +1201,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="apply-cols">
-    <div class="joken-card">
-      <h3><span class="jk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg></span>応募条件</h3>
-      <p class="jk-lead">本キャンペーンは、弊社がリスクを負って売上最大化に取り組む共同プロジェクトです。そのため、以下の条件を満たす企業様に限定させていただきます。</p>
-      <div class="jk-list">
-        <div class="jk-item">
-          <img class="jk-photo" src="assets/cond-product.jpg" alt="売れている商品のイメージ">
-          <div class="jk-body"><span class="jk-no">条件 01</span><p>既に市場で売れている、または独自の強みを持つ商品・サービスをお持ちの会社様</p></div>
-        </div>
-        <div class="jk-item">
-          <img class="jk-photo" src="assets/cond-partner.jpg" alt="パートナーシップのイメージ">
-          <div class="jk-body"><span class="jk-no">条件 02</span><p>KITENと組み、本気で売上をスケールさせたい会社様</p></div>
+      <div class="joken-card">
+        <h3><span class="jk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4a3 3 0 0 1 6 0"/><path d="M9 11h6M9 15h4"/></svg></span>応募条件</h3>
+        <p class="jk-lead">本キャンペーンは、弊社がリスクを負って売上最大化に取り組む共同プロジェクトです。そのため、以下の条件を満たす企業様に限定させていただきます。</p>
+        <div class="jk-list">
+          <div class="jk-item">
+            <img class="jk-photo" src="assets/cond-product.jpg" alt="売れている商品のイメージ">
+            <div class="jk-body"><span class="jk-no">条件 01</span><p>既に市場で売れている、または独自の強みを持つ商品・サービスをお持ちの会社様</p></div>
+          </div>
+          <div class="jk-item">
+            <img class="jk-photo" src="assets/cond-partner.jpg" alt="パートナーシップのイメージ">
+            <div class="jk-body"><span class="jk-no">条件 02</span><p>KITENと組み、本気で売上をスケールさせたい会社様</p></div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="flow-card">
-      <h3 class="fl-title"><span></span>応募から開始までの流れ<span></span></h3>
-      <div class="flow3">
-        <div class="col">
-          <div class="col-head">
-            <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v9.5"/><path d="M15 3v3h3"/><path d="M6 3v18h7"/><path d="M9 9h6M9 12h4"/><circle cx="16" cy="16.5" r="3.2"/><path d="M18.4 18.9L21 21.5"/></svg></span>
-            <div><span class="fl-step">STEP 01</span><h4>エントリー<br>（書類審査）</h4></div>
+      <div class="flow-card">
+        <h3 class="fl-title"><span></span>応募から開始までの流れ<span></span></h3>
+        <div class="flow3">
+          <div class="col">
+            <div class="col-head">
+              <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v9.5"/><path d="M15 3v3h3"/><path d="M6 3v18h7"/><path d="M9 9h6M9 12h4"/><circle cx="16" cy="16.5" r="3.2"/><path d="M18.4 18.9L21 21.5"/></svg></span>
+              <div><span class="fl-step">STEP 01</span><h4>エントリー<br>（書類審査）</h4></div>
+            </div>
+            <p>本ページのボタンからエントリーフォームへ。会社情報と商品・サービスURLをご入力いただければ、専門マーケターがスピーディに書類審査します。</p>
           </div>
-          <p>本ページのボタンからエントリーフォームへ。会社情報と商品・サービスURLをご入力いただければ、専門マーケターがスピーディに書類審査します。</p>
-        </div>
-        <div class="col">
-          <div class="col-head">
-            <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><circle cx="12" cy="9" r="2.1"/><path d="M8.5 14.5c.7-1.8 2-2.7 3.5-2.7s2.8.9 3.5 2.7"/><path d="M12 17v4"/><path d="M8.5 21h7"/></svg></span>
-            <div><span class="fl-step">STEP 02</span><h4>最終選考<br>（オンライン面談）</h4></div>
+          <div class="col">
+            <div class="col-head">
+              <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><circle cx="12" cy="9" r="2.1"/><path d="M8.5 14.5c.7-1.8 2-2.7 3.5-2.7s2.8.9 3.5 2.7"/><path d="M12 17v4"/><path d="M8.5 21h7"/></svg></span>
+              <div><span class="fl-step">STEP 02</span><h4>最終選考<br>（オンライン面談）</h4></div>
+            </div>
+            <p>書類審査を通過した企業様と、オンライン面談を実施します。現状のお悩みや目標獲得単価・件数を詳しくお伺いします。</p>
           </div>
-          <p>書類審査を通過した企業様と、オンライン面談を実施します。現状のお悩みや目標獲得単価・件数を詳しくお伺いします。</p>
-        </div>
-        <div class="col">
-          <div class="col-head">
-            <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3.4 2.1 5 6 5 9.5l-2.6 3h-4.8L7 12c0-3.5 1.6-7.4 5-9.5z"/><circle cx="12" cy="9" r="1.8"/><path d="M7 12l-3 3.5 3.4.6"/><path d="M17 12l3 3.5-3.4.6"/><path d="M10.4 16.5L9.4 21l2.6-1.6 2.6 1.6-1-4.5"/></svg></span>
-            <div><span class="fl-step">STEP 03</span><h4>キャンペーン適用・<br>プロジェクト始動</h4></div>
+          <div class="col">
+            <div class="col-head">
+              <span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3.4 2.1 5 6 5 9.5l-2.6 3h-4.8L7 12c0-3.5 1.6-7.4 5-9.5z"/><circle cx="12" cy="9" r="1.8"/><path d="M7 12l-3 3.5 3.4.6"/><path d="M17 12l3 3.5-3.4.6"/><path d="M10.4 16.5L9.4 21l2.6-1.6 2.6 1.6-1-4.5"/></svg></span>
+              <div><span class="fl-step">STEP 03</span><h4>キャンペーン適用・<br>プロジェクト始動</h4></div>
+            </div>
+            <p>面談を通過した5社様と成果報酬条件をすり合わせ、NDA締結後、専属チームがキャスティング選定・プロモーション準備に入ります。</p>
           </div>
-          <p>面談を通過した5社様と成果報酬条件をすり合わせ、NDA締結後、専属チームがキャスティング選定・プロモーション準備に入ります。</p>
         </div>
       </div>
-    </div>
     </div>
 
     <p class="apply-note">※審査結果により、ご希望に添えない場合がございます。</p>
   </div>
 </section>
-
 
 <!-- 7. 最終CTA・フォーム -->
 <section class="sec-green" id="entry">
@@ -1264,7 +1272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div class="entry-cta">
-        <div class="cta-guide" aria-hidden="true">...</div>
+        <div class="cta-guide" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5l7 7 7-7"/><path d="M5 12.5l7 7 7-7"/></svg></div>
         <a class="cta-btn" href="https://campaign07.kit-en.co.jp/form/" target="_blank" rel="noopener">
           <span class="cta-sub-lead">\ キャスティング費用が0円 /</span>
           <span class="cta-main">
@@ -1273,7 +1281,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="arrow">▶</span>
           </span>
         </a>
-      <p class="entry-note">...</p>
+        <p class="entry-note">※エントリーフォームが開きます。ご入力いただいた情報は、プライバシーポリシーに基づき厳重に管理いたします。</p>
       </div>
     </div>
   </div>
@@ -1289,7 +1297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 // カウントダウン（締切: 2026-08-15 18:00 JST）
 (function () {
-  var deadline = new Date('2026-07-31T18:00:00+09:00').getTime();
+  var deadline = new Date('2026-08-15T18:00:00+09:00').getTime();
   var ids = ['cd-d', 'cd-h', 'cd-m', 'cd-s'];
   function pad(n) { return String(n).padStart(2, '0'); }
   function tick() {
@@ -1302,7 +1310,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var d = Math.floor(diff / 86400000);
     var h = Math.floor(diff % 86400000 / 3600000);
     var m = Math.floor(diff % 3600000 / 60000);
-    var s = Math.floor(diff % 60000 / 1000);
+    var s = Math.floor(diff % 3600000 % 60000 / 1000);
     var v = [d, pad(h), pad(m), pad(s)];
     ids.forEach(function (id, i) { document.getElementById(id).textContent = v[i]; });
     setTimeout(tick, 1000);
