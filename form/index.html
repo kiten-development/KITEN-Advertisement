@@ -179,6 +179,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>会社情報と商品・サービスURLをご入力ください。専門マーケターがスピーディに書類審査のうえ、担当者よりご連絡いたします。</p>
   </div>
 
+  <input type="hidden" name="user_agent" id="user_agent">
+
   <form class="entry-form" id="entry-form" autocomplete="off" data-endpoint="https://script.google.com/macros/s/AKfycbwfarVkFAZedLFeBrgKibS5k7QD_iVdyMV2WD8IVkOCq6ibF3lUlPTytC4UgITINtp2DA/exec">
     <input type="text" name="website" class="ef-honey" tabindex="-1" autocomplete="off">
     <div class="ef-row">
@@ -232,6 +234,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 
+  document.getElementById('user_agent').value = navigator.userAgent;
+
 // URL末尾の index.html を非表示にする
 if (window.location.pathname.endsWith('/index.html')) {
   const cleanPath = window.location.pathname.replace(/index\.html$/, '');
@@ -242,6 +246,8 @@ if (window.location.pathname.endsWith('/index.html')) {
     cleanPath + window.location.search + window.location.hash
   );
 }
+
+formData.set('user_agent', navigator.userAgent);
 
 // エントリーフォーム送信（Google Apps Script Web App経由でスプレッドシートに追記）
 (function () {
